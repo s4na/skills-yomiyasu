@@ -1,0 +1,168 @@
+{
+  "base_commit": "32d17d827804391eb1ad555a05e376081c7c1516",
+  "candidate_blob": "29e682210f8326d4a23e01247686618fa5db860e",
+  "aliases": {
+    "E": "a931",
+    "L": "b942",
+    "B": "fa86",
+    "N": "ab97"
+  },
+  "executors": [
+    "b17",
+    "a931",
+    "b942",
+    "e975",
+    "fa86",
+    "ab97"
+  ],
+  "scorers": [
+    "c953",
+    "d964",
+    "bc08",
+    "cd19"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout_sha256": "6e3e657722a6058c0ca3cab8f89219b16d53159e7f200fc71bc0a53894e88c2c",
+  "score_ids": {
+    "c953": [
+      "3a6-mixed-status-report-E",
+      "3a6-mixed-status-report-L",
+      "4db-02-E",
+      "4db-02-L",
+      "d91-1-E",
+      "d91-1-L",
+      "D6-E",
+      "D6-L",
+      "4db-03-E",
+      "4db-03-L"
+    ],
+    "d964": [
+      "3a6-mixed-status-report-L",
+      "3a6-mixed-status-report-E",
+      "4db-02-L",
+      "4db-02-E",
+      "d91-1-L",
+      "d91-1-E",
+      "D6-L",
+      "D6-E",
+      "4db-03-L",
+      "4db-03-E"
+    ],
+    "bc08": [
+      "82d-04-01-B",
+      "82d-04-01-N",
+      "82d-04-02-B",
+      "82d-04-02-N",
+      "82d-04-03-B",
+      "82d-04-03-N",
+      "82d-05-01-B",
+      "82d-05-01-N",
+      "82d-05-02-B",
+      "82d-05-02-N",
+      "82d-05-03-B",
+      "82d-05-03-N"
+    ],
+    "cd19": [
+      "82d-04-01-N",
+      "82d-04-01-B",
+      "82d-04-02-N",
+      "82d-04-02-B",
+      "82d-04-03-N",
+      "82d-04-03-B",
+      "82d-05-01-N",
+      "82d-05-01-B",
+      "82d-05-02-N",
+      "82d-05-02-B",
+      "82d-05-03-N",
+      "82d-05-03-B"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "draft_sources": {
+    "a931": "b17",
+    "b942": "b17",
+    "fa86": "e975",
+    "ab97": "e975"
+  },
+  "reused_records": {
+    "b17": "../06/b17: archived input/output fixture, not a new execution in round 07"
+  },
+  "candidate_scope": "Body of optional verification skill; editing skill unchanged.",
+  "installed_skill_blob": "df747ec712c67f55a16d93e709f0156a17928e4d",
+  "holdout_source_sha256": {
+    "82d/04.json": "87fcfd720a51c4b026d10e616300c4be2318430e91a5df6ff6a88d6134224d94",
+    "82d/05.json": "b03caefd5e32cc829bc3fcfcb82233bffaca454d9f72377656ace7172f776248"
+  },
+  "executor_condition_sha256": {
+    "b17": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "a931": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "b942": "d05e7db7ea02339ea129e4528ed91d469dccbdd28579c99336b9aeb8a1090571",
+    "e975": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "fa86": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "ab97": "d05e7db7ea02339ea129e4528ed91d469dccbdd28579c99336b9aeb8a1090571"
+  },
+  "single_condition_sources": {},
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents.",
+  "dispatch_condition_sha256": {
+    "rb17": "3629ef6de06ee6657b049b2bd411f9a45b24ac121ddbc2befbe41cb0116e750a",
+    "ra931": "65862a95c75420c97c05219f9317fb08142a7f8dfdc89df2f68d04fdce96b2eb",
+    "rb942": "bbc57cbad39dce7fa76033681c8b74e221fdd8e865a7c66b8cbf5edd09784788",
+    "re975": "5fefacdbe22bd7c4c799729755bbd9d19b00c6c573dc311e53c5595681d7d2c3",
+    "rfa86": "429c38dc66a7a04ee0df42ec4d1ea17e30838af8779a7cbce7e12fce5945da33",
+    "rab97": "bbb81d28e03975153d85ebddf642a9b45f9acd6e5ee393e7cd15122935e7f595",
+    "sc953": "a32f2ed4bfc5ac5259029d46161694caa42b0bcb5cfb777dd671fc41b9b5e398",
+    "sd964": "5a52d6256b1190d91de0303b77ff479ee7998d40d1865187608c50226725940d",
+    "sbc08": "50cdd06404186e83b0cc968603f81495f3a17d691bcde7c776d831cd5297419a",
+    "scd19": "3eb55086819b425f8e1810ebce8e1df8cf5e5bc9a72523fcb1696ca032933bb6"
+  },
+  "executor_ids": {
+    "b17": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "a931": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "b942": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "e975": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ],
+    "fa86": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ],
+    "ab97": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective inventory of archived dispatch entries and executor case order; not proof of pre-run fixation or actual isolation."
+}
