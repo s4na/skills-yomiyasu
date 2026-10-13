@@ -1,0 +1,124 @@
+{
+  "scores": [
+    {
+      "id": "3a6-mixed-status-report-L",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "3a6-mixed-status-report-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "4db-02-L",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "4db-02-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "d91-1-L",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "d91-1-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "D6-L",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "D6-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "4db-03-L",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "4db-03-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    }
+  ]
+}

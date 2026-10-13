@@ -1,0 +1,98 @@
+{
+  "base_commit": "32d17d827804391eb1ad555a05e376081c7c1516",
+  "candidate_blob": "29e682210f8326d4a23e01247686618fa5db860e",
+  "aliases": {
+    "E": "a931",
+    "L": "b942",
+    "B": "fa86",
+    "N": "ab97"
+  },
+  "executors": [
+    "b17",
+    "a931",
+    "b942",
+    "e975",
+    "fa86",
+    "ab97"
+  ],
+  "scorers": [
+    "c953",
+    "d964",
+    "bc08",
+    "cd19"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout_sha256": "6e3e657722a6058c0ca3cab8f89219b16d53159e7f200fc71bc0a53894e88c2c",
+  "score_ids": {
+    "c953": [
+      "3a6-mixed-status-report-E",
+      "3a6-mixed-status-report-L",
+      "4db-02-E",
+      "4db-02-L",
+      "d91-1-E",
+      "d91-1-L",
+      "D6-E",
+      "D6-L",
+      "4db-03-E",
+      "4db-03-L"
+    ],
+    "d964": [
+      "3a6-mixed-status-report-L",
+      "3a6-mixed-status-report-E",
+      "4db-02-L",
+      "4db-02-E",
+      "d91-1-L",
+      "d91-1-E",
+      "D6-L",
+      "D6-E",
+      "4db-03-L",
+      "4db-03-E"
+    ],
+    "bc08": [
+      "82d-04-01-B",
+      "82d-04-01-N",
+      "82d-04-02-B",
+      "82d-04-02-N",
+      "82d-04-03-B",
+      "82d-04-03-N",
+      "82d-05-01-B",
+      "82d-05-01-N",
+      "82d-05-02-B",
+      "82d-05-02-N",
+      "82d-05-03-B",
+      "82d-05-03-N"
+    ],
+    "cd19": [
+      "82d-04-01-N",
+      "82d-04-01-B",
+      "82d-04-02-N",
+      "82d-04-02-B",
+      "82d-04-03-N",
+      "82d-04-03-B",
+      "82d-05-01-N",
+      "82d-05-01-B",
+      "82d-05-02-N",
+      "82d-05-02-B",
+      "82d-05-03-N",
+      "82d-05-03-B"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "draft_sources": {
+    "a931": "b17",
+    "b942": "b17",
+    "fa86": "e975",
+    "ab97": "e975"
+  },
+  "reused_records": {
+    "b17": "../06/b17: archived input/output fixture, not a new execution in round 07"
+  },
+  "candidate_scope": "Body of optional verification skill; editing skill unchanged.",
+  "installed_skill_blob": "df747ec712c67f55a16d93e709f0156a17928e4d",
+  "holdout_source_sha256": {
+    "82d/04.json": "87fcfd720a51c4b026d10e616300c4be2318430e91a5df6ff6a88d6134224d94",
+    "82d/05.json": "b03caefd5e32cc829bc3fcfcb82233bffaca454d9f72377656ace7172f776248"
+  }
+}
