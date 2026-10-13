@@ -94,5 +94,15 @@
   "holdout_source_sha256": {
     "82d/04.json": "87fcfd720a51c4b026d10e616300c4be2318430e91a5df6ff6a88d6134224d94",
     "82d/05.json": "b03caefd5e32cc829bc3fcfcb82233bffaca454d9f72377656ace7172f776248"
-  }
+  },
+  "executor_condition_sha256": {
+    "b17": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "a931": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "b942": "d05e7db7ea02339ea129e4528ed91d469dccbdd28579c99336b9aeb8a1090571",
+    "e975": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "fa86": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "ab97": "d05e7db7ea02339ea129e4528ed91d469dccbdd28579c99336b9aeb8a1090571"
+  },
+  "single_condition_sources": {},
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents."
 }

@@ -82,6 +82,35 @@ class PacketRecordsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
             check(self.root)
 
+    def test_rehashed_preliminary_output_from_other_condition_is_rejected(self):
+        candidate = json.loads((self.root / "evals/03/df8/response.json").read_text())
+        outputs = {item["id"]: item["text"] for item in candidate["outputs"]}
+        def replace_output(data):
+            for item in data["items"]:
+                item["output"] = outputs[item["id"]]
+        self.change_json("evals/03/317/request.json", replace_output)
+        with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
+            check(self.root)
+
+    def test_rehashed_executor_skill_swap_is_rejected(self):
+        baseline = json.loads((self.root / "evals/03/8bc/request.json").read_text())
+        self.change_json("evals/03/df8/request.json",
+                         lambda data: data.update(skill=baseline["skill"]))
+        with self.assertRaisesRegex(ValueError, "Execution condition mismatch"):
+            check(self.root)
+
+    def test_rehashed_external_skill_path_change_is_rejected(self):
+        self.change_json("evals/01/4f2/request.json",
+                         lambda data: data.update(skill_path="/different/SKILL.md"))
+        with self.assertRaisesRegex(ValueError, "Execution condition mismatch"):
+            check(self.root)
+
+    def test_missing_preliminary_binding_is_rejected(self):
+        self.change_json("evals/03/metadata.json",
+                         lambda data: data.pop("single_condition_sources"))
+        with self.assertRaisesRegex(ValueError, "Missing scoring source binding"):
+            check(self.root)
+
     def test_rehashed_missing_score_is_rejected(self):
         self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
         with self.assertRaisesRegex(ValueError, "Scoring IDs mismatch"):

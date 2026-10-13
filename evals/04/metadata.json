@@ -47,5 +47,11 @@
       "9e1-06-M"
     ]
   },
-  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp."
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "executor_condition_sha256": {
+    "e40": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "fa9": "3f6f33f003651f9da90e8569c562035024a46b88672c214c72acf00aa3d3639b"
+  },
+  "single_condition_sources": {},
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents."
 }
