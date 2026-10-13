@@ -53,5 +53,30 @@
     "fa9": "3f6f33f003651f9da90e8569c562035024a46b88672c214c72acf00aa3d3639b"
   },
   "single_condition_sources": {},
-  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents."
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents.",
+  "dispatch_condition_sha256": {
+    "re40": "9533177424ab40195c0580a6daf12af942f10bdb3fd15fd74600c826a24e7aa3",
+    "rfa9": "4da50dc7977a41bac2c77864ba123101f17822c8330af997723799e82a6b5f53",
+    "sf69": "e209cf6762535b394f6c0ea6b36a946bb71f9ace36c615890dbec4d6158ac1b0",
+    "sa34": "f34185d38f898d6a624853ec7064d83e92497e227e7b1a9edb038545b8542dbd"
+  },
+  "executor_ids": {
+    "e40": [
+      "9e1-01",
+      "9e1-02",
+      "9e1-03",
+      "9e1-04",
+      "9e1-05",
+      "9e1-06"
+    ],
+    "fa9": [
+      "9e1-01",
+      "9e1-02",
+      "9e1-03",
+      "9e1-04",
+      "9e1-05",
+      "9e1-06"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective index of archived dispatch entries and executor request case order; not evidence of pre-run freezing or actual execution."
 }
