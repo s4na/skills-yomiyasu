@@ -23,5 +23,89 @@
   "model": "host inherited default; no override",
   "duration_ms": null,
   "tool_uses": null,
-  "holdout_sha256": "5488cee8a8bdae81e28179857695d4c1dff7d5926db4450f0b7ef4c97e871f9e"
+  "holdout_sha256": "5488cee8a8bdae81e28179857695d4c1dff7d5926db4450f0b7ef4c97e871f9e",
+  "score_ids": {
+    "317": [
+      "3a6-long-operations",
+      "3a6-mixed-status-report",
+      "3a6-natural-essay"
+    ],
+    "c76": [
+      "3a6-long-operations-A",
+      "3a6-long-operations-B",
+      "3a6-mixed-status-report-A",
+      "3a6-mixed-status-report-B",
+      "3a6-natural-essay-A",
+      "3a6-natural-essay-B"
+    ],
+    "891": [
+      "3a6-long-operations-B",
+      "3a6-long-operations-A",
+      "3a6-mixed-status-report-B",
+      "3a6-mixed-status-report-A",
+      "3a6-natural-essay-B",
+      "3a6-natural-essay-A"
+    ],
+    "28f": [
+      "45f-business-01-D",
+      "45f-business-01-C",
+      "45f-status-02-D",
+      "45f-status-02-C",
+      "45f-essay-03-D",
+      "45f-essay-03-C"
+    ],
+    "85c": [
+      "45f-business-01-C",
+      "45f-business-01-D",
+      "45f-status-02-C",
+      "45f-status-02-D",
+      "45f-essay-03-C",
+      "45f-essay-03-D"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "executor_condition_sha256": {
+    "8bc": "9b2d338da004c3dca1d0db4f1077a312227c27d764b6299963cbca1b7dfa340c",
+    "df8": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "297": "9b2d338da004c3dca1d0db4f1077a312227c27d764b6299963cbca1b7dfa340c",
+    "dc5": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859"
+  },
+  "single_condition_sources": {
+    "317": "8bc"
+  },
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents.",
+  "dispatch_condition_sha256": {
+    "r8bc": "a0ff14f5e276605fd5f1477375c465879854a57a779ca1e04f06e098f35fcf7b",
+    "rdf8": "b7a42a5c9ca28df360c08e1dc23190508494081dba2bb23cca67ed4dc1cd5325",
+    "r297": "b062abbb3c0c9875b126ed311d4a0241605bcbcc9b5d5ca93558fcab58f5d7f8",
+    "rdc5": "8dca76f6446e7efb5fc9cda2284b4fc660e1177eeaaecc35b2daac8eebfbe2d0",
+    "s317": "fc2adce9d7ce34572322e36910f8703663f1d6ff26e20ac6ce6a7d6c77241dd6",
+    "sc76": "bb91d62816c518b3c16642853318f6082daddf2214f374a20d91ab4fe11c9009",
+    "s891": "0c24e32d4809a27cba1b7412e7490ff376654234aac556d9a6e303576a2cf0b7",
+    "s28f": "ec3af2b609a62e9a3cd7283c63f423462702063f6f8dedb672e5e7e2f1d7cfb4",
+    "s85c": "ddcdad6b631541fc511fa519af0c8473c33e8ae19b04c366a2aca730f8f5cdc5"
+  },
+  "executor_ids": {
+    "8bc": [
+      "3a6-long-operations",
+      "3a6-mixed-status-report",
+      "3a6-natural-essay"
+    ],
+    "df8": [
+      "3a6-long-operations",
+      "3a6-mixed-status-report",
+      "3a6-natural-essay"
+    ],
+    "297": [
+      "45f-business-01",
+      "45f-status-02",
+      "45f-essay-03"
+    ],
+    "dc5": [
+      "45f-business-01",
+      "45f-status-02",
+      "45f-essay-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective index of archived dispatch entries and executor request case order; not evidence of pre-run freezing or actual execution."
 }

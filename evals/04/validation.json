@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "e3ef9e0fa232507a9984a67db59aa22e577951a9",
+  "baseline_test_exit": 1,
+  "candidate_test_exit": 0,
+  "tests": 5,
+  "baseline_failed_assertions": [
+    "missing round manifest rejected",
+    "rehashed different scoring text rejected",
+    "rehashed missing score rejected"
+  ],
+  "candidate_failed_assertions": [],
+  "post_publication": {
+    "baseline_commit": "fa2738a6ac3673d8b7be9a91183809902a10760e",
+    "baseline_test_exit": 1,
+    "candidate_test_exit": 0,
+    "tests": 8,
+    "baseline_failed_assertions": [
+      "rehashed changed rubric rejected",
+      "rehashed changed checks rejected",
+      "rehashed missing evidence rejected"
+    ],
+    "candidate_failed_assertions": []
+  },
+  "second_review": {
+    "baseline_commit": "b5ba2a9a546a3de5b958968fc88bc97ce5251ce8",
+    "baseline_test_exit": 1,
+    "candidate_test_exit": 0,
+    "tests": 11,
+    "baseline_failed_assertions": [
+      "empty scorer roster rejected",
+      "matching request/response omission rejected",
+      "placeholder evidence rejected"
+    ],
+    "candidate_failed_assertions": []
+  }
+}

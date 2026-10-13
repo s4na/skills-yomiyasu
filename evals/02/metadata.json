@@ -22,5 +22,117 @@
   "model": "host inherited default; no override",
   "duration_ms": null,
   "tool_uses": null,
-  "holdout_sha256": "1fdeb994aba94402868d39afb5a38786b4db79e13dc7580a4af46d79b215d4de"
+  "holdout_sha256": "1fdeb994aba94402868d39afb5a38786b4db79e13dc7580a4af46d79b215d4de",
+  "score_ids": {
+    "20a": [
+      "D1-V",
+      "D1-W",
+      "D2-V",
+      "D2-W",
+      "D3-V",
+      "D3-W",
+      "D4-V",
+      "D4-W",
+      "D5-V",
+      "D5-W",
+      "D6-V",
+      "D6-W",
+      "D7-V",
+      "D7-W",
+      "D8-V",
+      "D8-W",
+      "D9-V",
+      "D9-W"
+    ],
+    "e26": [
+      "D1-W",
+      "D1-V",
+      "D2-W",
+      "D2-V",
+      "D3-W",
+      "D3-V",
+      "D4-W",
+      "D4-V",
+      "D5-W",
+      "D5-V",
+      "D6-W",
+      "D6-V",
+      "D7-W",
+      "D7-V",
+      "D8-W",
+      "D8-V",
+      "D9-W",
+      "D9-V"
+    ],
+    "772": [
+      "82d-01-01-L",
+      "82d-01-01-K",
+      "82d-01-02-L",
+      "82d-01-02-K",
+      "82d-01-03-L",
+      "82d-01-03-K"
+    ],
+    "183": [
+      "82d-01-01-K",
+      "82d-01-01-L",
+      "82d-01-02-K",
+      "82d-01-02-L",
+      "82d-01-03-K",
+      "82d-01-03-L"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "executor_condition_sha256": {
+    "b72": "6ebf16818562e84a425945628cf00c0fd5fdc92b6637709a82505febff2b19eb",
+    "6f4": "9b2d338da004c3dca1d0db4f1077a312227c27d764b6299963cbca1b7dfa340c",
+    "03c": "6ebf16818562e84a425945628cf00c0fd5fdc92b6637709a82505febff2b19eb",
+    "b09": "9b2d338da004c3dca1d0db4f1077a312227c27d764b6299963cbca1b7dfa340c"
+  },
+  "single_condition_sources": {},
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents.",
+  "dispatch_condition_sha256": {
+    "rb72": "0db9cc009ba47ebeb9a5d4478b3774d7fd7a8a468c65e14422c0642aca659f8b",
+    "r6f4": "97c74060f3ca62e6edb56c4e1629ea2ab8173043ab744c09b0957abec9924944",
+    "r03c": "658f19420b7641cf2e508011c0e7acfa67a5ba3f578ae2d3b2b706b8cf82c41b",
+    "rb09": "332de90f1383bce6b2cd3b439805f1de34bc1161a6b4783a7899f281ae315f1e",
+    "s20a": "0a8309e3680f455dbb5d0cd218e836beea26526eac07bce64c4b95ed0e587ad4",
+    "se26": "697e82b4cd16cf8c2a37b454ef9be0a6f33e70edff3459bb9fff622d752062d0",
+    "s772": "1af2fcf7ed369ca5aba72e490d1790cdc8aea9638bdf982eddfb74c1a2ed296b",
+    "s183": "fd5f04acba0fcce8836bc88b622b95a94c0beec9d94c3d61f02a6217f56ffb83"
+  },
+  "executor_ids": {
+    "b72": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9"
+    ],
+    "6f4": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9"
+    ],
+    "03c": [
+      "82d-01-01",
+      "82d-01-02",
+      "82d-01-03"
+    ],
+    "b09": [
+      "82d-01-01",
+      "82d-01-02",
+      "82d-01-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective index of archived dispatch entries and executor request case order; not evidence of pre-run freezing or actual execution."
 }
