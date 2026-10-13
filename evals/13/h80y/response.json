@@ -1,0 +1,76 @@
+{
+  "scores": [
+    {
+      "id": "t05-holdout-01-D",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "t05-holdout-01-C",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "t05-holdout-02-D",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "t05-holdout-02-C",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "t05-holdout-03-D",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "t05-holdout-03-C",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "task_name": "ra13y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/a13y/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rb24y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/b24y/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "re57y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/e57y/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rf68y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/f68y/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "sc35y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/c35y/request.json のrubricと各itemsのrequest,input,draft,checks,outputだけが評価資料です。このファイル以外は読まないでください。inputが原文、draftが渡された改稿案、outputが照合後の出力です。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には具体的根拠を付けてください。好みの違いだけで減点しないでください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。evidence各項目はcriterion(1〜6),input(原文引用),output(出力引用),reasonの各フィールドを持つオブジェクト。必要ならreasonに改稿案の該当箇所も引用してください。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sd46y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/d46y/request.json のrubricと各itemsのrequest,input,draft,checks,outputだけが評価資料です。このファイル以外は読まないでください。inputが原文、draftが渡された改稿案、outputが照合後の出力です。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には具体的根拠を付けてください。好みの違いだけで減点しないでください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。evidence各項目はcriterion(1〜6),input(原文引用),output(出力引用),reasonの各フィールドを持つオブジェクト。必要ならreasonに改稿案の該当箇所も引用してください。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sg79y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/g79y/request.json のrubricと各itemsのrequest,input,draft,checks,outputだけが評価資料です。このファイル以外は読まないでください。inputが原文、draftが渡された改稿案、outputが照合後の出力です。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には具体的根拠を付けてください。好みの違いだけで減点しないでください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。evidence各項目はcriterion(1〜6),input(原文引用),output(出力引用),reasonの各フィールドを持つオブジェクト。必要ならreasonに改稿案の該当箇所も引用してください。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sh80y",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/h80y/request.json のrubricと各itemsのrequest,input,draft,checks,outputだけが評価資料です。このファイル以外は読まないでください。inputが原文、draftが渡された改稿案、outputが照合後の出力です。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には具体的根拠を付けてください。好みの違いだけで減点しないでください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。evidence各項目はcriterion(1〜6),input(原文引用),output(出力引用),reasonの各フィールドを持つオブジェクト。必要ならreasonに改稿案の該当箇所も引用してください。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  }
+]

@@ -122,6 +122,74 @@ class PacketRecordsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Draft source mismatch"):
             check(self.root)
 
+    def test_rehashed_authored_batch_fields_are_rejected(self):
+        relative = "evals/13/a13y/request.json"
+        original = json.loads((self.root / relative).read_text())
+        for field in ("id", "request", "input", "draft"):
+            with self.subTest(field=field):
+                self.change_json(relative, lambda data: data["cases"][0].update({field: "changed"}))
+                try:
+                    with self.assertRaisesRegex(ValueError, "Raw JSON output contract mismatch|Authored draft case mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json(relative, lambda data: data.update(original))
+
+    def test_rehashed_authored_draft_declaration_is_required(self):
+        self.change_json("evals/13/metadata.json", lambda data: data.update(authored_drafts=[]))
+        with self.assertRaisesRegex(ValueError, "Draft source declaration mismatch"):
+            check(self.root)
+
+    def test_rehashed_authored_draft_cannot_be_derived(self):
+        self.change_json("evals/13/metadata.json", lambda data: data.update(draft_sources={"a13y": "b24y"}))
+        with self.assertRaisesRegex(ValueError, "Conflicting draft provenance"):
+            check(self.root)
+
+    def test_rehashed_raw_json_output_is_bound_to_scores(self):
+        self.change_json("evals/13/a13y/response.txt", lambda data: data["outputs"][0].update(text="changed"))
+        with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
+            check(self.root)
+
+    def test_rehashed_raw_json_output_order_is_required(self):
+        self.change_json("evals/13/a13y/response.txt", lambda data: data["outputs"].reverse())
+        with self.assertRaisesRegex(ValueError, "Raw JSON output contract mismatch"):
+            check(self.root)
+
+    def test_rehashed_raw_json_output_schema_is_required(self):
+        relative = "evals/13/a13y/response.txt"
+        original = json.loads((self.root / relative).read_text())
+        mutations = (
+            lambda data: data.update(extra="unexpected"),
+            lambda data: data["outputs"][0].update(extra="unexpected"),
+            lambda data: data["outputs"][0].update(text=123),
+            lambda data: data.update(outputs={}),
+        )
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                self.change_json(relative, mutation)
+                try:
+                    with self.assertRaisesRegex(ValueError, "Raw JSON output contract mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json(relative, lambda data: (data.clear(), data.update(original)))
+
+    def test_rehashed_invalid_batch_inventory_is_rejected(self):
+        relative = "evals/13/metadata.json"
+        original = json.loads((self.root / relative).read_text())
+        for field in ("authored_drafts", "raw_json_executors"):
+            for names in (["unknown"], ["a13y", "a13y"]):
+                with self.subTest(field=field, names=names):
+                    self.change_json(relative, lambda data: data.update({field: names}))
+                    try:
+                        with self.assertRaisesRegex(ValueError, "inventory mismatch"):
+                            check(self.root)
+                    finally:
+                        self.change_json(relative, lambda data: data.update(original))
+
+    def test_raw_json_response_cannot_be_replaced_with_derived_json(self):
+        self.change_json("evals/13/metadata.json", lambda data: data.update(raw_json_executors=[]))
+        with self.assertRaises(FileNotFoundError):
+            check(self.root)
+
     def test_rehashed_missing_draft_source_is_rejected(self):
         self.change_json("evals/06/metadata.json", lambda data: data.update(draft_sources={}))
         with self.assertRaisesRegex(ValueError, "Draft source declaration mismatch"):

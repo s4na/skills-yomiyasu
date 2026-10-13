@@ -69,6 +69,11 @@ def check_packets(run):
     single_cases = metadata.get("single_cases", {})
     if set(single_cases) - set(executors) or set(single_cases.values()) - set(cases):
         raise ValueError(f"Single-case inventory mismatch: {run}")
+    authored_drafts = metadata.get("authored_drafts", [])
+    raw_json_executors = metadata.get("raw_json_executors", [])
+    for label, names in (("Authored draft", authored_drafts), ("Raw JSON", raw_json_executors)):
+        if len(names) != len(set(names)) or set(names) - set(executors) or set(names) & set(single_cases):
+            raise ValueError(f"{label} inventory mismatch: {run}")
     outputs = {}
     inputs = {}
     for name in executors:
@@ -87,7 +92,17 @@ def check_packets(run):
             inputs[name] = {case_id: {field: case[field] for field in ("id", "input", "request")}}
             outputs[name] = {case_id: {"text": (run / name / "response.txt").read_text()}}
         else:
-            response = json.loads((run / name / "response.json").read_text())
+            response_file = "response.txt" if name in raw_json_executors else "response.json"
+            response = json.loads((run / name / response_file).read_text())
+            if name in raw_json_executors and (
+                not isinstance(response, dict) or set(response) != {"outputs"}
+                or not isinstance(response["outputs"], list)
+                or any(not isinstance(row, dict) or set(row) != {"id", "text"}
+                       or not isinstance(row["text"], str) for row in response["outputs"])
+                or [row["id"] for row in response["outputs"]]
+                != [case["id"] for case in request["cases"]]
+            ):
+                raise ValueError(f"Raw JSON output contract mismatch: {run / name}")
             inputs[name] = indexed(request["cases"], name)
             outputs[name] = indexed(response["outputs"], name)
         if list(inputs[name]) != executor_ids[name]:
@@ -97,13 +112,20 @@ def check_packets(run):
     draft_sources = metadata.get("draft_sources", {})
     if set(draft_sources) - set(inputs):
         raise ValueError(f"Unknown draft consumer: {run}")
+    if set(authored_drafts) & set(draft_sources):
+        raise ValueError(f"Conflicting draft provenance: {run}")
     for name, cases_by_id in inputs.items():
         source = draft_sources.get(name)
         if source is not None and source not in outputs:
             raise ValueError(f"Unknown draft source: {run / name}")
         for case_id, item in cases_by_id.items():
-            if ("draft" in item) != (source is not None):
+            if ("draft" in item) != (source is not None or name in authored_drafts):
                 raise ValueError(f"Draft source declaration mismatch: {run / name}")
+            if name in authored_drafts and (
+                case_id not in cases or any(item.get(field) != cases[case_id].get(field)
+                                           for field in ("id", "request", "input", "draft"))
+            ):
+                raise ValueError(f"Authored draft case mismatch: {run / name}: {case_id}")
             if source is not None and (
                 case_id not in outputs[source]
                 or item["draft"] != outputs[source][case_id]["text"]
