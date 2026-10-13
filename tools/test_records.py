@@ -124,13 +124,11 @@ class PacketRecordsTest(unittest.TestCase):
                     self.change_json("evals/03/dispatch.json",
                                      lambda data: data.__setitem__(slice(None), json.loads(original)))
 
-
     def test_rehashed_executor_batch_reordering_is_rejected(self):
         self.change_json("evals/03/df8/request.json", lambda data: data["cases"].reverse())
         self.change_json("evals/03/df8/response.json", lambda data: data["outputs"].reverse())
         with self.assertRaisesRegex(ValueError, "Expected execution IDs mismatch"):
             check(self.root)
-
 
     def test_rehashed_missing_score_is_rejected(self):
         self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
