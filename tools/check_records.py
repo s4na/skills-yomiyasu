@@ -28,6 +28,13 @@ def check_packets(run):
     if "evaluators" in metadata:
         executors = [name[1:] for name in executors]
         scorers = [name[1:] for name in scorers]
+    dispatch = json.loads((run / "dispatch.json").read_text())
+    expected_agents = {"r" + name for name in executors} | {"s" + name for name in scorers}
+    if {item["task_name"] for item in dispatch} != expected_agents or len(dispatch) != len(expected_agents):
+        raise ValueError(f"Dispatch roster mismatch: {run}")
+    score_ids = metadata["score_ids"]
+    if set(score_ids) != set(scorers):
+        raise ValueError(f"Scoring inventory mismatch: {run}")
     outputs = {}
     inputs = {}
     for name in executors:
@@ -46,6 +53,8 @@ def check_packets(run):
         scores = indexed(response["scores"], name)
         if items.keys() != scores.keys():
             raise ValueError(f"Scoring IDs mismatch: {run / name}")
+        if set(items) != set(score_ids[name]) or len(items) != len(score_ids[name]):
+            raise ValueError(f"Expected scoring IDs mismatch: {run / name}")
         for key, item in items.items():
             case_id, _, alias = key.rpartition("-")
             if alias in aliases:
@@ -68,6 +77,18 @@ def check_packets(run):
                 raise ValueError(f"Invalid scores: {run / name}: {key}")
             if any(value < 1 for value in values) and not scores[key].get("evidence"):
                 raise ValueError(f"Missing scoring evidence: {run / name}: {key}")
+            evidence = scores[key].get("evidence", [])
+            if not isinstance(evidence, list) or any(
+                not isinstance(entry, dict)
+                or type(entry.get("criterion")) is not int
+                or entry["criterion"] not in range(1, 7)
+                or any(not isinstance(entry.get(field), str) or not entry[field].strip()
+                       for field in ("input", "output", "reason"))
+                for entry in evidence
+            ):
+                raise ValueError(f"Invalid scoring evidence: {run / name}: {key}")
+            if {i + 1 for i, value in enumerate(values) if value < 1} - {entry["criterion"] for entry in evidence}:
+                raise ValueError(f"Incomplete scoring evidence: {run / name}: {key}")
 
 
 def check(root):

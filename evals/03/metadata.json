@@ -23,5 +23,45 @@
   "model": "host inherited default; no override",
   "duration_ms": null,
   "tool_uses": null,
-  "holdout_sha256": "5488cee8a8bdae81e28179857695d4c1dff7d5926db4450f0b7ef4c97e871f9e"
+  "holdout_sha256": "5488cee8a8bdae81e28179857695d4c1dff7d5926db4450f0b7ef4c97e871f9e",
+  "score_ids": {
+    "317": [
+      "3a6-long-operations",
+      "3a6-mixed-status-report",
+      "3a6-natural-essay"
+    ],
+    "c76": [
+      "3a6-long-operations-A",
+      "3a6-long-operations-B",
+      "3a6-mixed-status-report-A",
+      "3a6-mixed-status-report-B",
+      "3a6-natural-essay-A",
+      "3a6-natural-essay-B"
+    ],
+    "891": [
+      "3a6-long-operations-B",
+      "3a6-long-operations-A",
+      "3a6-mixed-status-report-B",
+      "3a6-mixed-status-report-A",
+      "3a6-natural-essay-B",
+      "3a6-natural-essay-A"
+    ],
+    "28f": [
+      "45f-business-01-D",
+      "45f-business-01-C",
+      "45f-status-02-D",
+      "45f-status-02-C",
+      "45f-essay-03-D",
+      "45f-essay-03-C"
+    ],
+    "85c": [
+      "45f-business-01-C",
+      "45f-business-01-D",
+      "45f-status-02-C",
+      "45f-status-02-D",
+      "45f-essay-03-C",
+      "45f-essay-03-D"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp."
 }

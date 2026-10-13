@@ -20,5 +20,17 @@
       "rehashed missing evidence rejected"
     ],
     "candidate_failed_assertions": []
+  },
+  "second_review": {
+    "baseline_commit": "b5ba2a9a546a3de5b958968fc88bc97ce5251ce8",
+    "baseline_test_exit": 1,
+    "candidate_test_exit": 0,
+    "tests": 11,
+    "baseline_failed_assertions": [
+      "empty scorer roster rejected",
+      "matching request/response omission rejected",
+      "placeholder evidence rejected"
+    ],
+    "candidate_failed_assertions": []
   }
 }

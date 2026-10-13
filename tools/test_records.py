@@ -22,10 +22,13 @@ class RecordsTest(unittest.TestCase):
             metadata = run / "metadata.json"
             metadata.write_text(json.dumps({
                 "protocol_sha256": hashlib.sha256(protocol.read_bytes()).hexdigest(),
-                "executors": [], "scorers": []
+                "executors": [], "scorers": [], "score_ids": {}
             }))
+            dispatch = run / "dispatch.json"
+            dispatch.write_text("[]")
             (run / "manifest.json").write_text(json.dumps({
-                "metadata.json": hashlib.sha256(metadata.read_bytes()).hexdigest()
+                "metadata.json": hashlib.sha256(metadata.read_bytes()).hexdigest(),
+                "dispatch.json": hashlib.sha256(dispatch.read_bytes()).hexdigest()
             }))
             check(root)
             protocol.write_text("意味を変えても成功。\n")
@@ -92,6 +95,26 @@ class PacketRecordsTest(unittest.TestCase):
                     score.pop("evidence")
         self.change_json("evals/03/c76/response.json", remove_evidence)
         with self.assertRaisesRegex(ValueError, "Missing scoring evidence"):
+            check(self.root)
+
+    def test_rehashed_empty_scorer_roster_is_rejected(self):
+        self.change_json("evals/03/metadata.json", lambda data: data.update(scorers=[]))
+        with self.assertRaisesRegex(ValueError, "Dispatch roster mismatch"):
+            check(self.root)
+
+    def test_rehashed_matching_omission_is_rejected(self):
+        self.change_json("evals/03/c76/request.json", lambda data: data["items"].pop())
+        self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
+        with self.assertRaisesRegex(ValueError, "Expected scoring IDs mismatch"):
+            check(self.root)
+
+    def test_rehashed_placeholder_evidence_is_rejected(self):
+        def remove_rationale(data):
+            for score in data["scores"]:
+                if min(score["values"]) < 1:
+                    score["evidence"] = [""]
+        self.change_json("evals/03/c76/response.json", remove_rationale)
+        with self.assertRaisesRegex(ValueError, "Invalid scoring evidence"):
             check(self.root)
 
 

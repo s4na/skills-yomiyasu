@@ -22,5 +22,64 @@
   "model": "host inherited default; no override",
   "duration_ms": null,
   "tool_uses": null,
-  "holdout_sha256": "1fdeb994aba94402868d39afb5a38786b4db79e13dc7580a4af46d79b215d4de"
+  "holdout_sha256": "1fdeb994aba94402868d39afb5a38786b4db79e13dc7580a4af46d79b215d4de",
+  "score_ids": {
+    "20a": [
+      "D1-V",
+      "D1-W",
+      "D2-V",
+      "D2-W",
+      "D3-V",
+      "D3-W",
+      "D4-V",
+      "D4-W",
+      "D5-V",
+      "D5-W",
+      "D6-V",
+      "D6-W",
+      "D7-V",
+      "D7-W",
+      "D8-V",
+      "D8-W",
+      "D9-V",
+      "D9-W"
+    ],
+    "e26": [
+      "D1-W",
+      "D1-V",
+      "D2-W",
+      "D2-V",
+      "D3-W",
+      "D3-V",
+      "D4-W",
+      "D4-V",
+      "D5-W",
+      "D5-V",
+      "D6-W",
+      "D6-V",
+      "D7-W",
+      "D7-V",
+      "D8-W",
+      "D8-V",
+      "D9-W",
+      "D9-V"
+    ],
+    "772": [
+      "82d-01-01-L",
+      "82d-01-01-K",
+      "82d-01-02-L",
+      "82d-01-02-K",
+      "82d-01-03-L",
+      "82d-01-03-K"
+    ],
+    "183": [
+      "82d-01-01-K",
+      "82d-01-01-L",
+      "82d-01-02-K",
+      "82d-01-02-L",
+      "82d-01-03-K",
+      "82d-01-03-L"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp."
 }

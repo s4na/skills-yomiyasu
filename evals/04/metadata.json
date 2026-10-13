@@ -16,5 +16,36 @@
   "model": "host inherited default; no override",
   "duration_ms": null,
   "tool_uses": null,
-  "holdout": "not run: prompt alternative rejected; production prompt unchanged"
+  "holdout": "not run: prompt alternative rejected; production prompt unchanged",
+  "score_ids": {
+    "f69": [
+      "9e1-01-M",
+      "9e1-01-N",
+      "9e1-02-M",
+      "9e1-02-N",
+      "9e1-03-M",
+      "9e1-03-N",
+      "9e1-04-M",
+      "9e1-04-N",
+      "9e1-05-M",
+      "9e1-05-N",
+      "9e1-06-M",
+      "9e1-06-N"
+    ],
+    "a34": [
+      "9e1-01-N",
+      "9e1-01-M",
+      "9e1-02-N",
+      "9e1-02-M",
+      "9e1-03-N",
+      "9e1-03-M",
+      "9e1-04-N",
+      "9e1-04-M",
+      "9e1-05-N",
+      "9e1-05-M",
+      "9e1-06-N",
+      "9e1-06-M"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp."
 }
