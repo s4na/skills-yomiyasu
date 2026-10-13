@@ -116,5 +116,15 @@
       "71c-06-U"
     ]
   },
-  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp."
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "executor_condition_sha256": {
+    "9ad": "f0764eb3f9b91387f610cc29dc1ec1f35893e3c36814a97e1372275ecdace0f9",
+    "c38": "6ebf16818562e84a425945628cf00c0fd5fdc92b6637709a82505febff2b19eb",
+    "4f2": "d03dbfa3f4dd7375900261eb4c2522787c9a6e189019db8d6b32318c7d328a8b",
+    "18a": "f0764eb3f9b91387f610cc29dc1ec1f35893e3c36814a97e1372275ecdace0f9",
+    "7d3": "6ebf16818562e84a425945628cf00c0fd5fdc92b6637709a82505febff2b19eb",
+    "f01": "afd370b0ee8aeb04d1a1b021383abfb985c04f26510380cb81d33daf8218c625"
+  },
+  "single_condition_sources": {},
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents."
 }

@@ -274,5 +274,23 @@
     ]
   },
   "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
-  "decision": "Reject A, B and C; retain the base skill. Raw scores include contradictions documented in README.md."
+  "decision": "Reject A, B and C; retain the base skill. Raw scores include contradictions documented in README.md.",
+  "executor_condition_sha256": {
+    "bb4": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "2d8": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "691": "f0764eb3f9b91387f610cc29dc1ec1f35893e3c36814a97e1372275ecdace0f9",
+    "a90": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "752": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "ae3": "663f0894d6a94bdf2e5c961b67e494711b092bc5845ec16cd31a1db28c0ad4ed",
+    "89d": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "902": "663f0894d6a94bdf2e5c961b67e494711b092bc5845ec16cd31a1db28c0ad4ed",
+    "75c": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "e93": "bc2320482cb3ebe7dc9e5c7065a715c17c3cec9adcb7f2ea9dfc93428b43001e",
+    "768": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "643": "3d7def5e8c4f22f8b48503637d09c4c47c14ec48ff121da3aa751db3d0d6ea9f",
+    "72e": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "adc": "3d7def5e8c4f22f8b48503637d09c4c47c14ec48ff121da3aa751db3d0d6ea9f"
+  },
+  "single_condition_sources": {},
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents."
 }

@@ -11,6 +11,14 @@ def indexed(items, label):
     return result
 
 
+def condition_digest(request):
+    # Freeze the archived execution instructions, excluding the case payload.
+    condition = {key: value for key, value in request.items() if key != "cases"}
+    encoded = json.dumps(condition, ensure_ascii=False, sort_keys=True,
+                         separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
 def check_packets(run):
     metadata = json.loads((run / "metadata.json").read_text())
     rubric = (run.parent / "protocol.md").read_text().split("## 合否")[1].split("## 比較")[0]
@@ -35,11 +43,21 @@ def check_packets(run):
     score_ids = metadata["score_ids"]
     if set(score_ids) != set(scorers):
         raise ValueError(f"Scoring inventory mismatch: {run}")
+    conditions = metadata.get("executor_condition_sha256", {})
+    if set(conditions) != set(executors):
+        raise ValueError(f"Execution condition inventory mismatch: {run}")
+    single_sources = metadata.get("single_condition_sources", {})
+    if set(single_sources) - set(scorers) or any(
+        source not in executors for source in single_sources.values()
+    ):
+        raise ValueError(f"Scoring source inventory mismatch: {run}")
     outputs = {}
     inputs = {}
     for name in executors:
         request = json.loads((run / name / "request.json").read_text())
         response = json.loads((run / name / "response.json").read_text())
+        if condition_digest(request) != conditions[name]:
+            raise ValueError(f"Execution condition mismatch: {run / name}")
         inputs[name] = indexed(request["cases"], name)
         outputs[name] = indexed(response["outputs"], name)
         if inputs[name].keys() != outputs[name].keys():
@@ -77,9 +95,11 @@ def check_packets(run):
             if alias in aliases:
                 sources = [aliases[alias]]
             else:
-                # Preliminary single-condition packets retain the original ID.
+                # Preliminary packets retain original IDs and need an explicit source.
                 case_id = key
-                sources = list(outputs)
+                if name not in single_sources:
+                    raise ValueError(f"Missing scoring source binding: {run / name}: {key}")
+                sources = [single_sources[name]]
             matching = [source for source in sources if case_id in outputs[source]
                         and outputs[source][case_id]["text"] == item["output"]
                         and all(inputs[source][case_id][field] == item[field]
