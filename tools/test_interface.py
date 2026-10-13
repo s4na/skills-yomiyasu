@@ -6,6 +6,14 @@ import unittest
 class InterfaceTest(unittest.TestCase):
     root = Path(__file__).resolve().parents[1] / 'evals/06/interface'
 
+    def test_distributed_skill_matches_executed_fixture(self):
+        repo = Path(__file__).resolve().parents[1]
+        fixture = repo / 'evals/07/interface/de86/request.json'
+        if not fixture.exists():
+            fixture = repo / 'evals/06/interface/cd75/request.json'
+        request = json.loads(fixture.read_text())
+        self.assertEqual((repo / 'skills/yomiyasu-verify/SKILL.md').read_text(), request['skill'])
+
     def test_previous_response_has_no_json_mapping(self):
         with self.assertRaises(json.JSONDecodeError):
             json.loads((self.root / 'bc64/response.txt').read_text())
