@@ -31,6 +31,11 @@
   "fda/request.json": "788cc767bef3584fa2a10825becdf04e229f14ce6da1179fde0549110890b781",
   "fda/response.json": "91fbeca6c62ddb4e9d80bde4d7634e76a36990d522cc8844700eef61f880f1f2",
   "holdout.json": "86355859c3b0c005fab8b6a9c8c6a0d485849fee66b6aad5c9b15a9aa8284727",
+  "interface/bc64/request.json": "29362236af4b477eda7ab3921aa4a3845bd14eaf4cd8aec5122f920437cdb540",
+  "interface/bc64/response.txt": "2b225c09f0c5c3a03c24aecd1d5f63dcb53282955c8b1c37fdbcf7ac842b00cf",
+  "interface/cd75/request.json": "7a6d9d31105cde871357c1c834ea4d8e358527a3840fe673f9ba0d9ec10c7fdf",
+  "interface/cd75/response.txt": "eedc756d0c5d3f81834c13f7429f9083ba9269ead3b5b5512a152b2ef9793a8e",
+  "interface/dispatch.json": "9aa5020ca721068911b7805a2a0105a118f08784a86d3b3a36465e50ea85ab4a",
   "metadata.json": "9d6a9f0b3bab312dcc56949e4919336027f2a33f86e01831b95f6648e8daa29d",
   "plan.md": "eddbfe53abdce82437555025df31ec8a992f1028172b1e9f7edcbe502b0c040c"
 }
