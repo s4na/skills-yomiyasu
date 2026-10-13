@@ -1,0 +1,40 @@
+{
+  "scores": [
+    {
+      "id": "3a6-long-operations",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "3a6-mixed-status-report",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "3a6-natural-essay",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    }
+  ]
+}
