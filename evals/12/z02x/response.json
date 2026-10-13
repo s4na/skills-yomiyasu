@@ -1,0 +1,76 @@
+{
+  "scores": [
+    {
+      "id": "s94_condition_negation-B",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "s94_condition_negation-A",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "s94_certainty_bullets-D",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "s94_certainty_bullets-C",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "s94_keep_json-F",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    },
+    {
+      "id": "s94_keep_json-E",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "evidence": []
+    }
+  ]
+}

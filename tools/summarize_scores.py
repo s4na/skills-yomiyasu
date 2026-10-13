@@ -9,9 +9,16 @@ from pathlib import Path
 
 def summarize(root):
     groups = {}
+    excluded_rounds = []
     for metadata_path in sorted((root / "evals").glob("*/metadata.json")):
         run = metadata_path.parent
         metadata = json.loads(metadata_path.read_text())
+        if metadata.get("status") == "invalid_case_set":
+            excluded_rounds.append({
+                "round": str(run.relative_to(root)),
+                "reason": metadata["exclusion_reason"],
+            })
+            continue
         names = metadata.get("scorers", metadata.get("evaluators", []))
         if "evaluators" in metadata:
             names = [name[1:] for name in names]
@@ -23,6 +30,8 @@ def summarize(root):
             for item in request["items"]:
                 material = {field: item[field] for field in
                             ("request", "input", "checks", "output")}
+                if "draft" in item:
+                    material["draft"] = item["draft"]
                 material["rubric"] = request["rubric"]
                 canonical = json.dumps(material, ensure_ascii=False, sort_keys=True)
                 # Group by the full material, not a hash or candidate label.
@@ -45,6 +54,7 @@ def summarize(root):
     results.sort(key=lambda row: row["material_sha256"])
     return {
         "meaning": "Observed grades only. Disputed is not a pass; unanimous pass is not proof of correctness.",
+        "excluded_rounds": excluded_rounds,
         "counts": {status: sum(row["critical_status"] == status for row in results)
                    for status in ("pass", "fail", "disputed")},
         "groups": results,

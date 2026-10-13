@@ -1,0 +1,16 @@
+[
+  {
+    "task_name": "rq13x",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/q13x/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rr24x",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "/workspace/scratch/efb26719c30a/trials-20261014/r24x/request.json のskillに従いcasesを処理してください。読めるファイルはそのrequest.jsonのみです。他のスキル・周辺ファイル・外部検索・他エージェントは禁止。依頼への実際の出力を同ディレクトリresponse.txtに保存。説明・自己評価を混ぜないでください。別ファイルreport.jsonへ {\"unclear\":[],\"discretionary\":[],\"retries\":0} 形式で不明点・裁量判断・自己申告のやり直し回数を保存。最終返信は保存先だけ。commit・pushは禁止。"
+  }
+]

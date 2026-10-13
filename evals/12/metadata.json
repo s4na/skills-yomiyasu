@@ -1,0 +1,125 @@
+{
+  "aliases": {
+    "A": "s35x",
+    "B": "t46x",
+    "C": "u57x",
+    "D": "v68x",
+    "E": "w79x",
+    "F": "x80x"
+  },
+  "executors": [
+    "s35x",
+    "t46x",
+    "u57x",
+    "v68x",
+    "w79x",
+    "x80x"
+  ],
+  "scorers": [
+    "y91x",
+    "z02x"
+  ],
+  "single_cases": {
+    "s35x": "s94_condition_negation",
+    "t46x": "s94_condition_negation",
+    "u57x": "s94_certainty_bullets",
+    "v68x": "s94_certainty_bullets",
+    "w79x": "s94_keep_json",
+    "x80x": "s94_keep_json"
+  },
+  "scoring_draft": true,
+  "score_ids": {
+    "y91x": [
+      "s94_condition_negation-A",
+      "s94_condition_negation-B",
+      "s94_certainty_bullets-C",
+      "s94_certainty_bullets-D",
+      "s94_keep_json-E",
+      "s94_keep_json-F"
+    ],
+    "z02x": [
+      "s94_condition_negation-B",
+      "s94_condition_negation-A",
+      "s94_certainty_bullets-D",
+      "s94_certainty_bullets-C",
+      "s94_keep_json-F",
+      "s94_keep_json-E"
+    ]
+  },
+  "executor_ids": {
+    "s35x": [
+      "s94_condition_negation"
+    ],
+    "t46x": [
+      "s94_condition_negation"
+    ],
+    "u57x": [
+      "s94_certainty_bullets"
+    ],
+    "v68x": [
+      "s94_certainty_bullets"
+    ],
+    "w79x": [
+      "s94_keep_json"
+    ],
+    "x80x": [
+      "s94_keep_json"
+    ]
+  },
+  "executor_condition_sha256": {
+    "s35x": "255126f0f48bd06c1085976a908c26ae47852b85d19dbf59ddfa7b73695f22c0",
+    "t46x": "ab48cda394707d0255896ca77891f2c12ad6ebbf07f6787d4064a521035476b1",
+    "u57x": "f18c30cb7abe4f8169c4778614773546e10592ac7a0043a89137a3b746e5aa08",
+    "v68x": "bc0a04d96b34b6b395f584576cccfb271dc594dbc4e4a1fde53e0c3b492aac08",
+    "w79x": "8a81b9f4c5eeab4779e2fc410b2262177c55cf61bad31a223e6b5f4e5d84f0eb",
+    "x80x": "ae66f7254c3005260171ebd287c0695ed4b8cb31a0ff7ff4e728e179a944d18a"
+  },
+  "dispatch_condition_sha256": {
+    "rs35x": "83a726a8d9076a98b895a121488af644ae6642749e37d55383479992a062bc73",
+    "rt46x": "cb5a8128d0974a32cb4a1f149fb5e413cc94295babc84bd107b062e991dcd4ba",
+    "ru57x": "16e873979381a959d0c167f99985a3b9014a86be094fb3af8af8aa28466c71fc",
+    "rv68x": "70a99ecdf07d3d123369dfe66cf1360d5bdd5cc77a1a8ba68ca143e5861c9337",
+    "rw79x": "f51ae5f27d0da3fa1f12173825c744efe9878abda0db1cd9874a6eaec2805f7a",
+    "rx80x": "ff59890b585097e43cb847365db1ee9031ea12f5ec68a8f660491e53bf1333bd",
+    "sy91x": "921e91b951d8855d3de3dfc9e56133c7f64da0e02b9c0d215517e15a43a95c59",
+    "sz02x": "6388fd2ee8cbffad89e2db34e0e0e537c6bf5892559921356a7213909d13c73c"
+  },
+  "single_condition_sources": {},
+  "draft_sources": {},
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "candidate_sha256": "e4848299b7a34c13dbeec38272e984624eccd6d2fe69d39cb498dc6a8433fbaf",
+  "holdout_source_sha256": "60160e509098c4755e99b163880701044eed3c0d7ae016e4027af99efa93f1cc",
+  "interface_references": [
+    "../11/interface/q13x",
+    "../11/interface/r24x"
+  ],
+  "interface_provenance": "Reused independent one-case and three-case interface executions using the identical candidate SHA. Invalidity of the round 11 quality case set does not invalidate these separate interface fixtures. No new interface executions in this round.",
+  "canonical_provenance": "holdout.json adds user_request reconstructed exactly from request, input and draft; unmodified final authored source is s94/holdout.json. No new development executions.",
+  "score_ids_provenance": "Retrospective inventory of archived requests; not independent pre-run timestamp.",
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or isolation.",
+  "dispatch_batch_provenance": "Retrospective reconstruction from parent-confirmed sent wrapper templates and task names; not independent execution proof.",
+  "pre_execution_audit": {
+    "agent": "audit_s94",
+    "sequence": "Before candidate/holdout SHA fixation and all executions; auditor had no candidate or outputs.",
+    "change": "Author replaced a check asserting an application deadline with 「利用日の3日前までに申請しても、という条件を維持する」.",
+    "unchanged": [
+      "input",
+      "draft",
+      "request"
+    ],
+    "provenance": "Parent-reported audit chronology; no independent timestamp proof."
+  },
+  "invocations": {
+    "before_continuation": 101,
+    "round09_including_invalid_scoring": 22,
+    "exploration10": 6,
+    "invalid_round11": 10,
+    "this_round": 8,
+    "cumulative": 147,
+    "continuation_used": 46,
+    "continuation_limit": 72,
+    "includes": "execution and scoring agents, including invalid scoring and invalid case-set executions; independent review excluded"
+  }
+}
