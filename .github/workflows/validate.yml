@@ -10,3 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tools/check_records.py
+      - run: python3 -m unittest discover -s tools -p 'test_*.py'
