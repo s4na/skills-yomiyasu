@@ -44,6 +44,23 @@ def check_packets(run):
         outputs[name] = indexed(response["outputs"], name)
         if inputs[name].keys() != outputs[name].keys():
             raise ValueError(f"Execution IDs mismatch: {run / name}")
+    draft_sources = metadata.get("draft_sources", {})
+    if set(draft_sources) - set(inputs):
+        raise ValueError(f"Unknown draft consumer: {run}")
+    for name, cases_by_id in inputs.items():
+        source = draft_sources.get(name)
+        if source is not None and source not in outputs:
+            raise ValueError(f"Unknown draft source: {run / name}")
+        for case_id, item in cases_by_id.items():
+            if ("draft" in item) != (source is not None):
+                raise ValueError(f"Draft source declaration mismatch: {run / name}")
+            if source is not None and (
+                case_id not in outputs[source]
+                or item["draft"] != outputs[source][case_id]["text"]
+                or any(item[field] != inputs[source][case_id][field]
+                       for field in ("input", "request"))
+            ):
+                raise ValueError(f"Draft source mismatch: {run / name}: {case_id}")
     for name in scorers:
         request = json.loads((run / name / "request.json").read_text())
         response = json.loads((run / name / "response.json").read_text())

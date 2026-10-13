@@ -50,7 +50,7 @@ class PacketRecordsTest(unittest.TestCase):
         data = json.loads(path.read_text())
         change(data)
         path.write_text(json.dumps(data, ensure_ascii=False))
-        run = self.root / "evals/03"
+        run = self.root / "evals" / Path(relative).parts[1]
         manifest = run / "manifest.json"
         entries = json.loads(manifest.read_text())
         entries[str(path.relative_to(run))] = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -58,6 +58,17 @@ class PacketRecordsTest(unittest.TestCase):
 
     def test_complete_records_pass(self):
         check(self.root)
+
+    def test_rehashed_wrong_draft_is_rejected(self):
+        self.change_json("evals/06/f74/request.json",
+                         lambda data: data["cases"][0].update(draft="別の改稿です。"))
+        with self.assertRaisesRegex(ValueError, "Draft source mismatch"):
+            check(self.root)
+
+    def test_rehashed_missing_draft_source_is_rejected(self):
+        self.change_json("evals/06/metadata.json", lambda data: data.update(draft_sources={}))
+        with self.assertRaisesRegex(ValueError, "Draft source declaration mismatch"):
+            check(self.root)
 
     def test_missing_round_manifest_is_rejected(self):
         (self.root / "evals/03/manifest.json").unlink()

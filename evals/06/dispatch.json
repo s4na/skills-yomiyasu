@@ -1,0 +1,100 @@
+[
+  {
+    "task_name": "rb17",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語推敲をお願いします。/workspace/scratch/efb26719c30a/trials-20261014/b17/request.json を読み、skillの指示で各casesのrequestに従ってinputを推敲してください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rc48",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の改稿を確認してください。/workspace/scratch/efb26719c30a/trials-20261014/c48/request.json を読み、skillの指示に従って各casesのinput・request・draftを扱ってください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rf74",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の改稿を確認してください。/workspace/scratch/efb26719c30a/trials-20261014/f74/request.json を読み、skillの指示に従って各casesのinput・request・draftを扱ってください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rca7",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語推敲をお願いします。/workspace/scratch/efb26719c30a/trials-20261014/ca7/request.json を読み、skillの指示で各casesのrequestに従ってinputを推敲してください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "rdb8",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の改稿を確認してください。/workspace/scratch/efb26719c30a/trials-20261014/db8/request.json を読み、skillの指示に従って各casesのinput・request・draftを扱ってください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "r320",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語推敲をお願いします。/workspace/scratch/efb26719c30a/trials-20261014/320/request.json を読み、skillの指示で各casesのrequestに従ってinputを推敲してください。読めるファイルはこのディレクトリ内だけです。他のスキル・周辺ファイル・他エージェント・外部情報は禁止。結果は同ディレクトリresponse.jsonに {\"outputs\":[{\"id\":\"...\",\"text\":\"依頼への出力そのもの\"}],\"report\":{\"unclear\":[],\"discretionary\":[],\"retries\":0}} として保存。reportは不明点・裁量判断・自己申告のやり直し回数の別欄で、textに混ぜないでください。最終返信は保存先だけ。commit・pushは禁止。"
+  },
+  {
+    "task_name": "sd52",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/d52/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "se63",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/e63/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sa85",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/a85/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sb96",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/b96/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sec9",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/ec9/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sfda",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/fda/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sa6d",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/a6d/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  },
+  {
+    "task_name": "sd47",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "message": "日本語の編集結果を採点してください。/workspace/scratch/efb26719c30a/trials-20261014/d47/request.json のrubricと各itemsのrequest,input,checks,outputだけが評価資料です。このファイル以外は読まないでください。各itemを独立に固定rubricの6項目で1/0.5/0採点し、1未満には原文と出力の具体的根拠を付けてください。好みの違いだけで減点せず、意味と曖昧な解釈の範囲を確認してください。結果を同ディレクトリresponse.jsonに {\"scores\":[{\"id\":\"...\",\"values\":[1,1,1,1,1,1],\"evidence\":[]}]} として保存。候補や生成方法を推測しない。他ファイル・スキル・外部検索・他エージェント・commit・pushは禁止。最終返信は保存先だけ。"
+  }
+]
