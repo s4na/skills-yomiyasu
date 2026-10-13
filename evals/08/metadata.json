@@ -1,0 +1,182 @@
+{
+  "base_commit": "3f6d3c46e793b2a527ae8c06684131f74a17d8fa",
+  "candidate_blob": "4581c8423a373b94b7e59b6f1b59f7714df8a8f1",
+  "aliases": {
+    "J": "de20",
+    "S": "ef31",
+    "U": "ef97",
+    "V": "fa08",
+    "W": "cd32",
+    "X": "de43"
+  },
+  "executors": [
+    "de20",
+    "ef31",
+    "ef97",
+    "fa08",
+    "cd32",
+    "de43"
+  ],
+  "scorers": [
+    "fa42",
+    "ab53",
+    "ab19",
+    "bc20",
+    "ef54",
+    "fa65"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "score_ids": {
+    "fa42": [
+      "3a6-mixed-status-report-J",
+      "3a6-mixed-status-report-S",
+      "4db-02-J",
+      "4db-02-S",
+      "d91-1-J",
+      "d91-1-S",
+      "D6-J",
+      "D6-S",
+      "4db-03-J",
+      "4db-03-S"
+    ],
+    "ab53": [
+      "3a6-mixed-status-report-S",
+      "3a6-mixed-status-report-J",
+      "4db-02-S",
+      "4db-02-J",
+      "d91-1-S",
+      "d91-1-J",
+      "D6-S",
+      "D6-J",
+      "4db-03-S",
+      "4db-03-J"
+    ],
+    "ab19": [
+      "3a6-mixed-status-report-U",
+      "3a6-mixed-status-report-V",
+      "4db-02-U",
+      "4db-02-V",
+      "d91-1-U",
+      "d91-1-V",
+      "D6-U",
+      "D6-V",
+      "4db-03-U",
+      "4db-03-V"
+    ],
+    "bc20": [
+      "3a6-mixed-status-report-V",
+      "3a6-mixed-status-report-U",
+      "4db-02-V",
+      "4db-02-U",
+      "d91-1-V",
+      "d91-1-U",
+      "D6-V",
+      "D6-U",
+      "4db-03-V",
+      "4db-03-U"
+    ],
+    "ef54": [
+      "3a6-mixed-status-report-W",
+      "3a6-mixed-status-report-X",
+      "4db-02-W",
+      "4db-02-X",
+      "d91-1-W",
+      "d91-1-X",
+      "D6-W",
+      "D6-X",
+      "4db-03-W",
+      "4db-03-X"
+    ],
+    "fa65": [
+      "3a6-mixed-status-report-X",
+      "3a6-mixed-status-report-W",
+      "4db-02-X",
+      "4db-02-W",
+      "d91-1-X",
+      "d91-1-W",
+      "D6-X",
+      "D6-W",
+      "4db-03-X",
+      "4db-03-W"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "decision": "rejected: no candidate passed the fixed development gate",
+  "holdout_status": "not opened or run; holdout.json is an empty inventory, not a successful trial",
+  "new_launches": 12,
+  "total_executor_scorer_launches": 101,
+  "candidate_is_installed": false,
+  "installed_skill_blob": "8debb00fd53421308da9224d237cf10df7702b6d",
+  "executor_condition_sha256": {
+    "de20": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "ef31": "9dea7bc0dbd44bcffe9ac209ebf86dd7fd737719178977a1e17afb0efcc2cd8b",
+    "ef97": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "fa08": "bc9f37d9401403f1775e001475661c0981f73423609cd25bd37a0e9142803f72",
+    "cd32": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "de43": "bae2b652051f5ec96c6c7916b90e13aa52bf9af0d57c1843360eab6f73033c50"
+  },
+  "single_condition_sources": {},
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents.",
+  "dispatch_condition_sha256": {
+    "rde20": "d683ffb210dab4cce3fa73b5c3dd25e20de599ecb36a62e3d4e60dd3a0184a08",
+    "ref31": "cd68c379e60bf1dfe7369e3a2506ba078884dd6f6311968b993bd5ae25fe951d",
+    "ref97": "a678324c2efb570b4c7c1c01352ea479a247eb5d901cfebf791b4621320b5908",
+    "rfa08": "f0c837d97990c6f7ab894d795a70466b36cf150e0d3e95179e9695c9132c6a01",
+    "rcd32": "f16a4bcaf39a2273e7a54124817eab66765b1dfc03f427b71dc1247b2d27c43f",
+    "rde43": "3962872f86f275735ae972368f8b54a84e52c608a14050ea67fc8ea996378499",
+    "sfa42": "a697c242d320f2f10a83069a9f279e7f72afbf57354dc9c9f8a525505856bb14",
+    "sab53": "dcbf848a5af30c8c2c2abdb9a45f3f9341f4995ef598ba3c71cdaa71b03c467b",
+    "sab19": "d92b9518b5ad891d749c167bb935a57c1b8d34fd9852af4ed67d85a9ffcd013f",
+    "sbc20": "aaead9d9b99e5a65916b51208d542f87550da176bc597a2245289f3dc1dee958",
+    "sef54": "fd683bc38883e98a735b0851c3ca2c74b8d4229bce7f839ab459b16efb9fa703",
+    "sfa65": "b228cceb651cafeb2bd4e3ff512cb2e4b6faabf5de13adc045d166a807be3f53"
+  },
+  "executor_ids": {
+    "de20": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "ef31": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "ef97": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "fa08": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "cd32": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "de43": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective inventory of archived dispatch entries and executor case order; not proof of pre-run fixation or actual isolation."
+}

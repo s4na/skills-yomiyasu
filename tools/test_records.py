@@ -5,7 +5,7 @@ import shutil
 import tempfile
 import unittest
 
-from check_records import check
+from check_records import check, condition_digest
 
 
 class RecordsTest(unittest.TestCase):
@@ -58,6 +58,63 @@ class PacketRecordsTest(unittest.TestCase):
 
     def test_complete_records_pass(self):
         check(self.root)
+
+    def test_invalid_case_set_still_checks_scoring_links(self):
+        self.change_json("evals/11/o91x/request.json",
+                         lambda data: data["items"][0].update(output="別の本文です。"))
+        with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
+            check(self.root)
+
+    def test_rehashed_single_case_fields_are_bound_to_user_request(self):
+        relative = "evals/09/development.json"
+        original = json.loads((self.root / relative).read_text())
+        for field in ("request", "input", "draft", "user_request"):
+            with self.subTest(field=field):
+                self.change_json(relative, lambda data: data[0].update({field: "別の文章です。"}))
+                try:
+                    with self.assertRaisesRegex(ValueError, "Single-case canonical request mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json(relative, lambda data: data.__setitem__(slice(None), original))
+
+    def test_rehashed_single_case_raw_request_is_rejected(self):
+        relative = "evals/09/a12/request.json"
+        self.change_json(relative, lambda data: data.update(user_request="別の依頼です。"))
+        altered = json.loads((self.root / relative).read_text())
+        # Even refreshing the request-condition inventory must not detach the
+        # executed raw request from the canonical case used for scoring.
+        self.change_json("evals/09/metadata.json", lambda data:
+                         data["executor_condition_sha256"].update(a12=condition_digest(altered)))
+        with self.assertRaisesRegex(ValueError, "Single-case request mismatch"):
+            check(self.root)
+
+    def test_rehashed_single_case_raw_output_is_rejected(self):
+        relative = "evals/09/a12/response.txt"
+        path = self.root / relative
+        path.write_text("別の本文です。")
+        manifest = self.root / "evals/09/manifest.json"
+        entries = json.loads(manifest.read_text())
+        entries["a12/response.txt"] = hashlib.sha256(path.read_bytes()).hexdigest()
+        manifest.write_text(json.dumps(entries))
+        with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
+            check(self.root)
+
+    def test_rehashed_missing_or_changed_scoring_draft_is_rejected(self):
+        relative = "evals/09/e91x/request.json"
+        original = json.loads((self.root / relative).read_text())
+        for missing in (True, False):
+            with self.subTest(missing=missing):
+                def alter(data):
+                    if missing:
+                        data["items"][0].pop("draft")
+                    else:
+                        data["items"][0]["draft"] = "別の改稿です。"
+                self.change_json(relative, alter)
+                try:
+                    with self.assertRaisesRegex(ValueError, "Scoring draft mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json(relative, lambda data: data.update(original))
 
     def test_rehashed_wrong_draft_is_rejected(self):
         self.change_json("evals/06/f74/request.json",

@@ -1,0 +1,1 @@
+{"unclear": ["skillはid付きcases配列を想定していますが、user_requestはidのない単一の依頼です。"], "discretionary": ["user_requestの「2項目の箇条書きだけ」という指定を優先し、JSONではなく箇条書きの本文を返しました。"], "retries": 0}

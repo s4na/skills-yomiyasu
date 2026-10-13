@@ -1,0 +1,196 @@
+{
+  "aliases": {
+    "K": "a12",
+    "L": "b23",
+    "M": "c34",
+    "N": "d45",
+    "P": "e56",
+    "Q": "f67",
+    "R": "c90",
+    "S": "d01",
+    "T": "e12",
+    "U": "f23",
+    "V": "g34",
+    "W": "h45"
+  },
+  "executors": [
+    "a12",
+    "b23",
+    "c34",
+    "d45",
+    "e56",
+    "f67",
+    "c90",
+    "d01",
+    "e12",
+    "f23",
+    "g34",
+    "h45"
+  ],
+  "scorers": [
+    "e91x",
+    "f02x",
+    "g13x",
+    "h24x"
+  ],
+  "single_cases": {
+    "a12": "p61-dev-01",
+    "b23": "p61-dev-01",
+    "c34": "p61-dev-02",
+    "d45": "p61-dev-02",
+    "e56": "p61-dev-03",
+    "f67": "p61-dev-03",
+    "c90": "p61-holdout-01",
+    "d01": "p61-holdout-01",
+    "e12": "p61-holdout-02",
+    "f23": "p61-holdout-02",
+    "g34": "p61-holdout-03",
+    "h45": "p61-holdout-03"
+  },
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "score_ids": {
+    "e91x": [
+      "p61-dev-01-K",
+      "p61-dev-01-L",
+      "p61-dev-02-M",
+      "p61-dev-02-N",
+      "p61-dev-03-P",
+      "p61-dev-03-Q"
+    ],
+    "f02x": [
+      "p61-dev-01-L",
+      "p61-dev-01-K",
+      "p61-dev-02-N",
+      "p61-dev-02-M",
+      "p61-dev-03-Q",
+      "p61-dev-03-P"
+    ],
+    "g13x": [
+      "p61-holdout-01-R",
+      "p61-holdout-01-S",
+      "p61-holdout-02-T",
+      "p61-holdout-02-U",
+      "p61-holdout-03-V",
+      "p61-holdout-03-W"
+    ],
+    "h24x": [
+      "p61-holdout-01-S",
+      "p61-holdout-01-R",
+      "p61-holdout-02-U",
+      "p61-holdout-02-T",
+      "p61-holdout-03-W",
+      "p61-holdout-03-V"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "executor_ids": {
+    "a12": [
+      "p61-dev-01"
+    ],
+    "b23": [
+      "p61-dev-01"
+    ],
+    "c34": [
+      "p61-dev-02"
+    ],
+    "d45": [
+      "p61-dev-02"
+    ],
+    "e56": [
+      "p61-dev-03"
+    ],
+    "f67": [
+      "p61-dev-03"
+    ],
+    "c90": [
+      "p61-holdout-01"
+    ],
+    "d01": [
+      "p61-holdout-01"
+    ],
+    "e12": [
+      "p61-holdout-02"
+    ],
+    "f23": [
+      "p61-holdout-02"
+    ],
+    "g34": [
+      "p61-holdout-03"
+    ],
+    "h45": [
+      "p61-holdout-03"
+    ]
+  },
+  "executor_condition_sha256": {
+    "a12": "c448439104fe893f5123376a27f27dd436724f9c0662f55a863bd24972a54dea",
+    "b23": "87c3e7c3d72e5bd24e021a73fb576b374a9d14e1ffb77272f8019320283dd3f5",
+    "c34": "49c0f9e94eb0f6ac1fa53199bbced749661aa08c454d6dce7740bf2ce25bba24",
+    "d45": "d6df3220bfb19645091c19530467975fcfa2da0e63e81c78e08edfd68e6c6dd0",
+    "e56": "3aeb0c4325965bbb0b0b0a836dd53cbd8e77487e563d4b28a3b079513a03177d",
+    "f67": "3d301f27477f20b0986772663226392cb452396b351a9759e71ea7865ff6bd40",
+    "c90": "5b0ead8c8c899ae3042cdc22775346e40335565868bde5c9b0ea6a407adda28f",
+    "d01": "4daa65bb6232c69f3810ef460428951a87adab962c0ed1626c21df4d51e53797",
+    "e12": "4771fbfe749fafdb37766ddeb5383c06307a179cf874024630d334031f1efc3d",
+    "f23": "0dce3f3c45c597bdb04a52e58ea1eadd605aecff1fc496bf1ff2e20f8156cdce",
+    "g34": "64cdfee26d7c04f903a569c0dacfb6fbf08f43fbe2abf52df737dea06c568bff",
+    "h45": "63b5a7bcc0060bb3386208668c295903b6e859cf22243ac43a8c9d5e126604cf"
+  },
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or isolation.",
+  "single_condition_sources": {},
+  "draft_sources": {},
+  "candidate_sha256": "04d770f2106a0e08760c0b5ddb82c13428f0665ad21d43380495718fe7311df0",
+  "holdout_source_sha256": "e6b77ccf7f13d53681bfa9d6c13f8adcf7329916975058e26e69a83fafcb58e7",
+  "canonical_provenance": "development.json and holdout.json add user_request reconstructed exactly from request, input and draft. Unmodified authored cases are in p61/.",
+  "interface_executors": [
+    "u91x",
+    "v02x"
+  ],
+  "invocations": {
+    "before_this_round": 101,
+    "this_round": 22,
+    "original_execution_and_scoring": 18,
+    "corrective_scoring": 4,
+    "cumulative": 123,
+    "includes": "execution and scoring agents, including invalidated scoring; independent review excluded"
+  },
+  "dispatch_batch_provenance": "Retrospective reconstruction of sent wrappers; not independent evidence of execution, pre-run fixation, or actual isolation.",
+  "dispatch_condition_sha256": {
+    "ra12": "1d8825126ca2812792aaa9f288aef5d1e02aafb3fad8656d2816d3360cefc2bc",
+    "rb23": "2b8e7d6e0c4163d57037f546b0a807136c5774df5b5cf136bf9ced5e2de3c65a",
+    "rc34": "72a9676f01c7671f7c620f9f2befa5c5fea2f8063458c717937f245311d90c34",
+    "rd45": "8d034da273b9e21b0ae9b9b4cc3266b881031ef82b1fd4e30eba4a3fe5231ee7",
+    "re56": "3c7c60c14929c239db9416d1b92ba8145af3b31dfd0b29b6548b5f514caff547",
+    "rf67": "452ebaafe92c978343837e48a50157843d4472e16530dfceeefefc9279dacc57",
+    "rc90": "c55cfce092d00e58bf5b5a3aaa7711fe9265a43320ed429d5a9b8aab98899eac",
+    "rd01": "423dbabffff8beb598717eef7b16a2492fb03e8f1d1b3170292d2074e0c8a670",
+    "re12": "ce66873a1e90f72d57575961540b57aae4423c12d1ce78994314f39295402c38",
+    "rf23": "3fb7eb2af20dbc2fa8ffb6e6f83cb264a286e884bdaeb375cfc203b782b1a6d5",
+    "rg34": "101647c947e1b91c488910959f26306ae66d42bb550400528d62f2f7a94f9360",
+    "rh45": "d3550574a8fa1367baadbbcb90f4e5ac54321b61b14cb0a17d4930880c748bee",
+    "se91x": "7926c262b9b89bd3eec85f0d291647bd5356f0012cfa2015be6b4c76b200ad4c",
+    "sf02x": "144ef4f7b1495496d1ce699112a5aa9091d5245d6ba4dbe104a5a6e31343e317",
+    "sg13x": "8704df98150e6ae7c378ac977c3ea5f33fadf991b78c6277cda400b3823bb5cc",
+    "sh24x": "a28adc232255c0f43a5dc28c492d6abbf6d0bbe38427aae412258c6c6f2e504d"
+  },
+  "dispatch_reconstruction_source": "Executor wrappers were supplied by the parent agent: development and first holdout reconstructed from conversation summary, remaining holdout and batch from current sent messages. Corrective scorer wrappers were supplied from current sent messages. Original invalidated scorer dispatches are preserved in invalid_scoring/. This archive is not independent execution proof.",
+  "scoring_draft": true,
+  "invalid_scoring": {
+    "reason": "Original scorer packets omitted draft and cannot support draft-relative checks. Excluded from active scoring and adoption aggregates.",
+    "archived_scorers": [
+      "a78",
+      "b89",
+      "w13x",
+      "x24x"
+    ],
+    "audit_snapshot": "invalid_scoring/"
+  },
+  "rescoring_sources": {
+    "e91x": "invalid_scoring/a78",
+    "f02x": "invalid_scoring/b89",
+    "g13x": "invalid_scoring/w13x",
+    "h24x": "invalid_scoring/x24x"
+  },
+  "rescoring_provenance": "Only canonical draft was added to each scoring item. Original input, request, checks, output, rubric and presentation order were retained. Original executor outputs were not changed."
+}

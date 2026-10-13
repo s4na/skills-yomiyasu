@@ -1,0 +1,120 @@
+{
+  "aliases": {
+    "A": "i35x",
+    "B": "j46x",
+    "C": "k57x",
+    "D": "l68x",
+    "E": "m79x",
+    "F": "n80x"
+  },
+  "executors": [
+    "i35x",
+    "j46x",
+    "k57x",
+    "l68x",
+    "m79x",
+    "n80x"
+  ],
+  "scorers": [
+    "o91x",
+    "p02x"
+  ],
+  "single_cases": {
+    "i35x": "r83-01",
+    "j46x": "r83-01",
+    "k57x": "r83-02",
+    "l68x": "r83-02",
+    "m79x": "r83-03",
+    "n80x": "r83-03"
+  },
+  "scoring_draft": true,
+  "score_ids": {
+    "o91x": [
+      "r83-01-A",
+      "r83-01-B",
+      "r83-02-C",
+      "r83-02-D",
+      "r83-03-E",
+      "r83-03-F"
+    ],
+    "p02x": [
+      "r83-01-B",
+      "r83-01-A",
+      "r83-02-D",
+      "r83-02-C",
+      "r83-03-F",
+      "r83-03-E"
+    ]
+  },
+  "executor_ids": {
+    "i35x": [
+      "r83-01"
+    ],
+    "j46x": [
+      "r83-01"
+    ],
+    "k57x": [
+      "r83-02"
+    ],
+    "l68x": [
+      "r83-02"
+    ],
+    "m79x": [
+      "r83-03"
+    ],
+    "n80x": [
+      "r83-03"
+    ]
+  },
+  "executor_condition_sha256": {
+    "i35x": "550985bab0420adcdbc030a935030619434cb46bd455013672005a5fb1cbada9",
+    "j46x": "d86cf0b79e22cd65c12fa214b94260a5eee53009c0e01ed5fc717e2b4693c188",
+    "k57x": "2fa1a39e40d4db7a98f507dc80b0e71c868b96192dcb0c6c9c9c4c2b694b4bee",
+    "l68x": "3f36a5928d39c463bddfbf2cedfd725a9073b8acd061eae6b0e14c134620247b",
+    "m79x": "a8ae6580a44a8bc4be794b7937111f7533aec96862ec5c3d38342267725a26d3",
+    "n80x": "0b55e741cbdc3bddb896174da75cbc1f6a888730f23cd90f460b924e191e4525"
+  },
+  "dispatch_condition_sha256": {
+    "ri35x": "c463f91bb2dd0fcae5663d822379687d453cd0e9fcc5880fde26e52a7017c8e9",
+    "rj46x": "027f8ae223cba1763e6a5b8963aaccef8c1a7f9426266ff43a9df1cf282debcd",
+    "rk57x": "0c2a8dbeedbb20222512f3ee218e674b75668b445ca4ab5ca98c3296f6357ef0",
+    "rl68x": "a26c5b92b130b3b387538ed07113aea623517832f54ce04fb66fd1da29e97735",
+    "rm79x": "10814a887fdcbbb735fec9706f87fbba1bdb4e3b0cceac3d2ca3bb08665cbe03",
+    "rn80x": "97d269e58913de69e4b8e2a2ceb86bf3013d6cc785e7d3fe5e3ef91c47543a5c",
+    "so91x": "4d3d7b3197634debe717de77e49b819baca939e1233c0eb377fd392a9a696add",
+    "sp02x": "bf7e07d0baefeaa0a25dc4178091eb146314a399cba454eda938b1d0c5c3cc93"
+  },
+  "single_condition_sources": {},
+  "draft_sources": {},
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "candidate_sha256": "e4848299b7a34c13dbeec38272e984624eccd6d2fe69d39cb498dc6a8433fbaf",
+  "holdout_source_sha256": "5b0120fe5f5afbc4fa4afcec59776f3182e75831a4b1322b53bcb57fb676afb1",
+  "interface_executors": [
+    "q13x",
+    "r24x"
+  ],
+  "canonical_provenance": "holdout.json adds user_request reconstructed exactly from request, input and draft; unmodified authored source is r83/holdout.json. No new development cases were executed in this round.",
+  "score_ids_provenance": "Retrospective inventory of archived scoring requests; not independent pre-run evidence.",
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or isolation.",
+  "dispatch_batch_provenance": "Retrospective reconstruction using parent-confirmed sent wrappers and names; not independent execution proof or proof of actual isolation.",
+  "invocations": {
+    "before_continuation": 101,
+    "round09_including_invalid_scoring": 22,
+    "exploration10": 6,
+    "this_round": 10,
+    "cumulative": 139,
+    "continuation_used": 38,
+    "continuation_limit": 72,
+    "includes": "execution and scoring agents; independent review excluded"
+  },
+  "status": "invalid_case_set",
+  "exclusion_reason": "Independent case audit audit_r83 confirmed that r83-03 changes the location role from where the books were borrowed to where they are returned. Its checks unconditionally require draft identity, contradicting the request, which requires identity only when meaning is unchanged. The entire three-case set is excluded from adoption and quality aggregates; original cases, checks, outputs and grades are preserved.",
+  "case_audit": {
+    "agent": "audit_r83",
+    "exposure": "No executor outputs or grades were supplied to the case auditor.",
+    "finding": "r83-03 has contradictory request/checks; r83-01 and r83-02 had no confirmed contradiction.",
+    "disposition": "Exclude all three cases; do not revise criteria or rescore these outputs. Retest with a new unused set in a separate round."
+  }
+}
