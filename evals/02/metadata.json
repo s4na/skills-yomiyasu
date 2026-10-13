@@ -89,5 +89,50 @@
     "b09": "9b2d338da004c3dca1d0db4f1077a312227c27d764b6299963cbca1b7dfa340c"
   },
   "single_condition_sources": {},
-  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents."
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents.",
+  "dispatch_condition_sha256": {
+    "rb72": "0db9cc009ba47ebeb9a5d4478b3774d7fd7a8a468c65e14422c0642aca659f8b",
+    "r6f4": "97c74060f3ca62e6edb56c4e1629ea2ab8173043ab744c09b0957abec9924944",
+    "r03c": "658f19420b7641cf2e508011c0e7acfa67a5ba3f578ae2d3b2b706b8cf82c41b",
+    "rb09": "332de90f1383bce6b2cd3b439805f1de34bc1161a6b4783a7899f281ae315f1e",
+    "s20a": "0a8309e3680f455dbb5d0cd218e836beea26526eac07bce64c4b95ed0e587ad4",
+    "se26": "697e82b4cd16cf8c2a37b454ef9be0a6f33e70edff3459bb9fff622d752062d0",
+    "s772": "1af2fcf7ed369ca5aba72e490d1790cdc8aea9638bdf982eddfb74c1a2ed296b",
+    "s183": "fd5f04acba0fcce8836bc88b622b95a94c0beec9d94c3d61f02a6217f56ffb83"
+  },
+  "executor_ids": {
+    "b72": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9"
+    ],
+    "6f4": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9"
+    ],
+    "03c": [
+      "82d-01-01",
+      "82d-01-02",
+      "82d-01-03"
+    ],
+    "b09": [
+      "82d-01-01",
+      "82d-01-02",
+      "82d-01-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective index of archived dispatch entries and executor request case order; not evidence of pre-run freezing or actual execution."
 }
