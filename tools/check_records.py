@@ -29,7 +29,10 @@ def check_packets(run):
     for filename in ("development.json", "holdout.json"):
         path = run / filename
         if path.exists():
-            cases.update(indexed(json.loads(path.read_text()), str(path)))
+            split_cases = indexed(json.loads(path.read_text()), str(path))
+            if cases.keys() & split_cases.keys():
+                raise ValueError(f"Duplicate case IDs across splits: {run}")
+            cases.update(split_cases)
     aliases = metadata.get("aliases", {})
     if not aliases:
         aliases = {**metadata.get("development", {}), **metadata.get("holdout", {})}
@@ -121,6 +124,9 @@ def check_packets(run):
                 for entry in evidence
             ):
                 raise ValueError(f"Invalid scoring evidence: {run / name}: {key}")
+            if any(entry[field] not in item[field]
+                   for entry in evidence for field in ("input", "output")):
+                raise ValueError(f"Scoring evidence quote mismatch: {run / name}: {key}")
             if {i + 1 for i, value in enumerate(values) if value < 1} - {entry["criterion"] for entry in evidence}:
                 raise ValueError(f"Incomplete scoring evidence: {run / name}: {key}")
 
