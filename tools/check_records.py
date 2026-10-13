@@ -53,7 +53,7 @@ def check_packets(run):
         scores = indexed(response["scores"], name)
         if items.keys() != scores.keys():
             raise ValueError(f"Scoring IDs mismatch: {run / name}")
-        if set(items) != set(score_ids[name]) or len(items) != len(score_ids[name]):
+        if list(items) != score_ids[name]:
             raise ValueError(f"Expected scoring IDs mismatch: {run / name}")
         for key, item in items.items():
             case_id, _, alias = key.rpartition("-")
