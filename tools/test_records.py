@@ -59,6 +59,17 @@ class PacketRecordsTest(unittest.TestCase):
     def test_complete_records_pass(self):
         check(self.root)
 
+    def test_rehashed_wrong_draft_is_rejected(self):
+        self.change_json("evals/06/f74/request.json",
+                         lambda data: data["cases"][0].update(draft="別の改稿です。"))
+        with self.assertRaisesRegex(ValueError, "Draft source mismatch"):
+            check(self.root)
+
+    def test_rehashed_missing_draft_source_is_rejected(self):
+        self.change_json("evals/06/metadata.json", lambda data: data.update(draft_sources={}))
+        with self.assertRaisesRegex(ValueError, "Draft source declaration mismatch"):
+            check(self.root)
+
     def test_missing_round_manifest_is_rejected(self):
         (self.root / "evals/03/manifest.json").unlink()
         (self.root / "evals/03/c76/response.json").unlink()

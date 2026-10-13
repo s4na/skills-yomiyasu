@@ -1,0 +1,206 @@
+{
+  "base_commit": "e142e852f15ae0b121bbec2861aa1fb23f720615",
+  "candidate_blob": "c26b18dd54439bed00ad944c8e7a0d30ae0d135a",
+  "aliases": {
+    "F": "b17",
+    "H": "c48",
+    "M": "b17",
+    "P": "f74",
+    "Q": "ca7",
+    "T": "db8",
+    "CC": "320"
+  },
+  "executors": [
+    "b17",
+    "c48",
+    "f74",
+    "ca7",
+    "db8",
+    "320"
+  ],
+  "scorers": [
+    "d52",
+    "e63",
+    "a85",
+    "b96",
+    "ec9",
+    "fda",
+    "a6d",
+    "d47"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout_sha256": "86355859c3b0c005fab8b6a9c8c6a0d485849fee66b6aad5c9b15a9aa8284727",
+  "score_ids": {
+    "d52": [
+      "3a6-mixed-status-report-F",
+      "3a6-mixed-status-report-H",
+      "4db-02-F",
+      "4db-02-H",
+      "d91-1-F",
+      "d91-1-H",
+      "D6-F",
+      "D6-H",
+      "4db-03-F",
+      "4db-03-H"
+    ],
+    "e63": [
+      "3a6-mixed-status-report-H",
+      "3a6-mixed-status-report-F",
+      "4db-02-H",
+      "4db-02-F",
+      "d91-1-H",
+      "d91-1-F",
+      "D6-H",
+      "D6-F",
+      "4db-03-H",
+      "4db-03-F"
+    ],
+    "a85": [
+      "3a6-mixed-status-report-M",
+      "3a6-mixed-status-report-P",
+      "4db-02-M",
+      "4db-02-P",
+      "d91-1-M",
+      "d91-1-P",
+      "D6-M",
+      "D6-P",
+      "4db-03-M",
+      "4db-03-P"
+    ],
+    "b96": [
+      "3a6-mixed-status-report-P",
+      "3a6-mixed-status-report-M",
+      "4db-02-P",
+      "4db-02-M",
+      "d91-1-P",
+      "d91-1-M",
+      "D6-P",
+      "D6-M",
+      "4db-03-P",
+      "4db-03-M"
+    ],
+    "ec9": [
+      "82d-02-01-Q",
+      "82d-02-01-T",
+      "82d-02-02-Q",
+      "82d-02-02-T",
+      "82d-02-03-Q",
+      "82d-02-03-T",
+      "82d-03-01-Q",
+      "82d-03-01-T",
+      "82d-03-02-Q",
+      "82d-03-02-T",
+      "82d-03-03-Q",
+      "82d-03-03-T"
+    ],
+    "fda": [
+      "82d-02-01-T",
+      "82d-02-01-Q",
+      "82d-02-02-T",
+      "82d-02-02-Q",
+      "82d-02-03-T",
+      "82d-02-03-Q",
+      "82d-03-01-T",
+      "82d-03-01-Q",
+      "82d-03-02-T",
+      "82d-03-02-Q",
+      "82d-03-03-T",
+      "82d-03-03-Q"
+    ],
+    "a6d": [
+      "5a2-1-CC",
+      "5a2-2-CC",
+      "5a2-3-CC"
+    ],
+    "d47": [
+      "5a2-1-CC",
+      "5a2-2-CC",
+      "5a2-3-CC"
+    ]
+  },
+  "score_ids_provenance": "Retrospective inventory of archived requests; not an independent pre-run timestamp.",
+  "draft_sources": {
+    "c48": "b17",
+    "f74": "b17",
+    "db8": "ca7"
+  },
+  "candidate_scope": "Body of the optional verification skill; the original editing skill is unchanged.",
+  "installed_skill_blob": "8bfde25dc2def391e9f2f116f771d59adcc0d04e",
+  "holdout_source_sha256": {
+    "82d/02.json": "cf12df66db8b38748d34035bd8169bae69a5411265ba3b868be3041c58daa244",
+    "82d/03.json": "940a302316e668a79dcd910b34ee10f2842740f4cd1b592146d7a9053a753a89"
+  },
+  "executor_condition_sha256": {
+    "b17": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "c48": "9bb08095401f1d142194d2a3254ece91a946627fe566452d503858aadf1eb094",
+    "f74": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "ca7": "f6e47e1f3ecb792123f65378a324717707034b0b8ac69ea169826520055fb859",
+    "db8": "e56c689ddd58821c602c4bd11c5d52c3ba60f95563a9ae9820b2e93c2346ad64",
+    "320": "3d7def5e8c4f22f8b48503637d09c4c47c14ec48ff121da3aa751db3d0d6ea9f"
+  },
+  "single_condition_sources": {},
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents.",
+  "dispatch_condition_sha256": {
+    "rb17": "3629ef6de06ee6657b049b2bd411f9a45b24ac121ddbc2befbe41cb0116e750a",
+    "rc48": "65ccc82883715429d736285a6258b70150d4c892ecfc99fec57d24ee7a745e31",
+    "rf74": "75d25a500933a49776120cbdec3a505226161603f2064e8a31cf08d5b4b3a20a",
+    "rca7": "69bb820a81297016b40228b0e646a9bffb211f9025bcf312650bd16c3f17d772",
+    "rdb8": "62bb14bf63e67fcd143ad377a83f42f41bc62d92a23863d266b6c026acbb19ad",
+    "r320": "0131b5d45299901df3309ac9159f6d9889386095b3b7915d93b11f751306fba4",
+    "sd52": "ce1bdf7a55d7e7493e9862d3963568a06cc599ebe23173f68efd8dfae62f437f",
+    "se63": "439a0c0c141aa5cdbc0fc0dca90102cc7547d486d2b6ae3d3239e92e9578a391",
+    "sa85": "24effeb46efeb2d2e1d8035c36c53278edc396804ad9e2f008867bb1c3f11af2",
+    "sb96": "48bc53a379790fe69a2feee1e3222d26dca840024f06884aa488d2bc26cab6d3",
+    "sec9": "760d9cdb4a6c02d2aefe60eded523dbb7ecae6cd731bbe37c417f148a4e44c51",
+    "sfda": "5483f1db2df24614be9e8f422ba5eb525c5bee1567fa6c3270706417127b0283",
+    "sa6d": "5ffb3e8433170b94117cf12297c7afce466d9fbb188e9d3657f073938a2c71e6",
+    "sd47": "ae637bcadc06b6e84ef2b0eea6b8f4cf4d957280c05020cdb5135f37d87b5cf3"
+  },
+  "executor_ids": {
+    "b17": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "c48": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "f74": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "ca7": [
+      "82d-02-01",
+      "82d-02-02",
+      "82d-02-03",
+      "82d-03-01",
+      "82d-03-02",
+      "82d-03-03"
+    ],
+    "db8": [
+      "82d-02-01",
+      "82d-02-02",
+      "82d-02-03",
+      "82d-03-01",
+      "82d-03-02",
+      "82d-03-03"
+    ],
+    "320": [
+      "5a2-1",
+      "5a2-2",
+      "5a2-3"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective inventory of archived dispatch entries and executor case order; not proof of pre-run fixation or actual isolation."
+}
