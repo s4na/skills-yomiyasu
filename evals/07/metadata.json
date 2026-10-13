@@ -104,5 +104,65 @@
     "ab97": "d05e7db7ea02339ea129e4528ed91d469dccbdd28579c99336b9aeb8a1090571"
   },
   "single_condition_sources": {},
-  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents."
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents.",
+  "dispatch_condition_sha256": {
+    "rb17": "3629ef6de06ee6657b049b2bd411f9a45b24ac121ddbc2befbe41cb0116e750a",
+    "ra931": "65862a95c75420c97c05219f9317fb08142a7f8dfdc89df2f68d04fdce96b2eb",
+    "rb942": "bbc57cbad39dce7fa76033681c8b74e221fdd8e865a7c66b8cbf5edd09784788",
+    "re975": "5fefacdbe22bd7c4c799729755bbd9d19b00c6c573dc311e53c5595681d7d2c3",
+    "rfa86": "429c38dc66a7a04ee0df42ec4d1ea17e30838af8779a7cbce7e12fce5945da33",
+    "rab97": "bbb81d28e03975153d85ebddf642a9b45f9acd6e5ee393e7cd15122935e7f595",
+    "sc953": "a32f2ed4bfc5ac5259029d46161694caa42b0bcb5cfb777dd671fc41b9b5e398",
+    "sd964": "5a52d6256b1190d91de0303b77ff479ee7998d40d1865187608c50226725940d",
+    "sbc08": "50cdd06404186e83b0cc968603f81495f3a17d691bcde7c776d831cd5297419a",
+    "scd19": "3eb55086819b425f8e1810ebce8e1df8cf5e5bc9a72523fcb1696ca032933bb6"
+  },
+  "executor_ids": {
+    "b17": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "a931": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "b942": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "e975": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ],
+    "fa86": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ],
+    "ab97": [
+      "82d-04-01",
+      "82d-04-02",
+      "82d-04-03",
+      "82d-05-01",
+      "82d-05-02",
+      "82d-05-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective inventory of archived dispatch entries and executor case order; not proof of pre-run fixation or actual isolation."
 }

@@ -119,5 +119,64 @@
     "de43": "bae2b652051f5ec96c6c7916b90e13aa52bf9af0d57c1843360eab6f73033c50"
   },
   "single_condition_sources": {},
-  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents."
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or external skill_path contents.",
+  "dispatch_condition_sha256": {
+    "rde20": "d683ffb210dab4cce3fa73b5c3dd25e20de599ecb36a62e3d4e60dd3a0184a08",
+    "ref31": "cd68c379e60bf1dfe7369e3a2506ba078884dd6f6311968b993bd5ae25fe951d",
+    "ref97": "a678324c2efb570b4c7c1c01352ea479a247eb5d901cfebf791b4621320b5908",
+    "rfa08": "f0c837d97990c6f7ab894d795a70466b36cf150e0d3e95179e9695c9132c6a01",
+    "rcd32": "f16a4bcaf39a2273e7a54124817eab66765b1dfc03f427b71dc1247b2d27c43f",
+    "rde43": "3962872f86f275735ae972368f8b54a84e52c608a14050ea67fc8ea996378499",
+    "sfa42": "a697c242d320f2f10a83069a9f279e7f72afbf57354dc9c9f8a525505856bb14",
+    "sab53": "dcbf848a5af30c8c2c2abdb9a45f3f9341f4995ef598ba3c71cdaa71b03c467b",
+    "sab19": "d92b9518b5ad891d749c167bb935a57c1b8d34fd9852af4ed67d85a9ffcd013f",
+    "sbc20": "aaead9d9b99e5a65916b51208d542f87550da176bc597a2245289f3dc1dee958",
+    "sef54": "fd683bc38883e98a735b0851c3ca2c74b8d4229bce7f839ab459b16efb9fa703",
+    "sfa65": "b228cceb651cafeb2bd4e3ff512cb2e4b6faabf5de13adc045d166a807be3f53"
+  },
+  "executor_ids": {
+    "de20": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "ef31": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "ef97": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "fa08": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "cd32": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ],
+    "de43": [
+      "3a6-mixed-status-report",
+      "4db-02",
+      "d91-1",
+      "D6",
+      "4db-03"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective inventory of archived dispatch entries and executor case order; not proof of pre-run fixation or actual isolation."
 }
