@@ -108,6 +108,11 @@ class PacketRecordsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Expected scoring IDs mismatch"):
             check(self.root)
 
+    def test_rehashed_reordered_items_are_rejected(self):
+        self.change_json("evals/03/c76/request.json", lambda data: data["items"].reverse())
+        with self.assertRaisesRegex(ValueError, "Expected scoring IDs mismatch"):
+            check(self.root)
+
     def test_rehashed_placeholder_evidence_is_rejected(self):
         def remove_rationale(data):
             for score in data["scores"]:
