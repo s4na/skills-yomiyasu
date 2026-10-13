@@ -1,6 +1,7 @@
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import tempfile
 import unittest
 
@@ -20,7 +21,8 @@ class RecordsTest(unittest.TestCase):
             protocol.write_text("意味を変えたら失敗。\n")
             metadata = run / "metadata.json"
             metadata.write_text(json.dumps({
-                "protocol_sha256": hashlib.sha256(protocol.read_bytes()).hexdigest()
+                "protocol_sha256": hashlib.sha256(protocol.read_bytes()).hexdigest(),
+                "executors": [], "scorers": []
             }))
             (run / "manifest.json").write_text(json.dumps({
                 "metadata.json": hashlib.sha256(metadata.read_bytes()).hexdigest()
@@ -29,6 +31,47 @@ class RecordsTest(unittest.TestCase):
             protocol.write_text("意味を変えても成功。\n")
             with self.assertRaisesRegex(ValueError, "protocol hash mismatch"):
                 check(root)
+
+
+class PacketRecordsTest(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        self.root = Path(self.directory.name)
+        source = Path(__file__).resolve().parents[1]
+        for name in ("evals", "skills"):
+            shutil.copytree(source / name, self.root / name)
+
+    def change_json(self, relative, change):
+        path = self.root / relative
+        data = json.loads(path.read_text())
+        change(data)
+        path.write_text(json.dumps(data, ensure_ascii=False))
+        run = self.root / "evals/03"
+        manifest = run / "manifest.json"
+        entries = json.loads(manifest.read_text())
+        entries[str(path.relative_to(run))] = hashlib.sha256(path.read_bytes()).hexdigest()
+        manifest.write_text(json.dumps(entries))
+
+    def test_complete_records_pass(self):
+        check(self.root)
+
+    def test_missing_round_manifest_is_rejected(self):
+        (self.root / "evals/03/manifest.json").unlink()
+        (self.root / "evals/03/c76/response.json").unlink()
+        with self.assertRaisesRegex(ValueError, "Missing evaluation manifest"):
+            check(self.root)
+
+    def test_rehashed_wrong_scoring_text_is_rejected(self):
+        self.change_json("evals/03/c76/request.json",
+                         lambda data: data["items"][0].update(output="別の文章です。"))
+        with self.assertRaisesRegex(ValueError, "Scoring source mismatch"):
+            check(self.root)
+
+    def test_rehashed_missing_score_is_rejected(self):
+        self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
+        with self.assertRaisesRegex(ValueError, "Scoring IDs mismatch"):
+            check(self.root)
 
 
 if __name__ == "__main__":

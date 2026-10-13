@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "e3ef9e0fa232507a9984a67db59aa22e577951a9",
+  "baseline_test_exit": 1,
+  "candidate_test_exit": 0,
+  "tests": 5,
+  "baseline_failed_assertions": [
+    "missing round manifest rejected",
+    "rehashed different scoring text rejected",
+    "rehashed missing score rejected"
+  ],
+  "candidate_failed_assertions": []
+}

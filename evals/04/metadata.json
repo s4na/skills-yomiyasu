@@ -1,0 +1,20 @@
+{
+  "base_commit": "e3ef9e0fa232507a9984a67db59aa22e577951a9",
+  "candidate_blob": "8debb00fd53421308da9224d237cf10df7702b6d",
+  "aliases": {
+    "M": "e40",
+    "N": "fa9"
+  },
+  "executors": [
+    "e40",
+    "fa9"
+  ],
+  "scorers": [
+    "f69",
+    "a34"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout": "not run: prompt alternative rejected; production prompt unchanged"
+}
