@@ -1,0 +1,26 @@
+{
+  "base_commit": "fa64d340ee14d5681e187c8d25e195463cba11a4",
+  "candidate_blob": "448b5f0c842b37c73e45782c6aa302d9a933450b",
+  "aliases": {
+    "V": "b72",
+    "W": "6f4",
+    "K": "03c",
+    "L": "b09"
+  },
+  "executors": [
+    "b72",
+    "6f4",
+    "03c",
+    "b09"
+  ],
+  "scorers": [
+    "20a",
+    "e26",
+    "772",
+    "183"
+  ],
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "holdout_sha256": "1fdeb994aba94402868d39afb5a38786b4db79e13dc7580a4af46d79b215d4de"
+}
