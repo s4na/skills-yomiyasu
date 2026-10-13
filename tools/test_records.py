@@ -50,7 +50,7 @@ class PacketRecordsTest(unittest.TestCase):
         data = json.loads(path.read_text())
         change(data)
         path.write_text(json.dumps(data, ensure_ascii=False))
-        run = self.root / "evals" / Path(relative).parts[1]
+        run = self.root / Path(relative).parts[0] / Path(relative).parts[1]
         manifest = run / "manifest.json"
         entries = json.loads(manifest.read_text())
         entries[str(path.relative_to(run))] = hashlib.sha256(path.read_bytes()).hexdigest()
