@@ -130,6 +130,28 @@ class PacketRecordsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Expected execution IDs mismatch"):
             check(self.root)
 
+    def test_rehashed_cross_split_duplicate_id_is_rejected(self):
+        holdout = json.loads((self.root / "evals/03/holdout.json").read_text())
+        self.change_json("evals/03/development.json", lambda data: data.append(holdout[0]))
+        with self.assertRaisesRegex(ValueError, "Duplicate case IDs across splits"):
+            check(self.root)
+
+    def test_rehashed_unquoted_evidence_is_rejected(self):
+        relative = "evals/03/c76/response.json"
+        original = json.loads((self.root / relative).read_text())
+        for field in ("input", "output"):
+            with self.subTest(field=field):
+                def replace_quote(data):
+                    for score in data["scores"]:
+                        for entry in score.get("evidence", []):
+                            entry[field] = "x"
+                self.change_json(relative, replace_quote)
+                try:
+                    with self.assertRaisesRegex(ValueError, "Scoring evidence quote mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json(relative, lambda data: data.update(original))
+
     def test_rehashed_missing_score_is_rejected(self):
         self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
         with self.assertRaisesRegex(ValueError, "Scoring IDs mismatch"):
