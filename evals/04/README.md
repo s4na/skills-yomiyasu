@@ -38,3 +38,8 @@ PR4初回head `fa2738a6ac3673d8b7be9a91183809902a10760e` に対するレビュ�
 metadataの`single_condition_sources`は匿名aliasを持たない採点役から実行役への対応で、01〜04では03の317→8bcだけに使う。`executor_condition_sha256`は実行役ごとにrequestからcasesを除いたJSONを、キー順でソートし、`ensure_ascii=False, separators=(",", ":")`でUTF-8へ変換したSHA256。追加索引は保存済みrequestと記録された対応から事後に作成したもので、実行前の条件固定や実際にその指示で実行されたことを証明しない。元のrequest・response・得点・基準は変更していない。
 
 01の原本条件は`skill_path`でリポジトリ外のファイルを参照する。そのパス文字列は照合するが、参照先の内容はこの検査では読まず、実行時の内容も確認できない。`reference-files.json`に原本と実行時blobの記録があるが、実際に読み込まれたファイルの証明ではない。索引とrequest・manifestを一緒に整合させた変更は検出できないため、改ざん耐性や来歴の証明はGit履歴・レビューと別の信頼できる記録に依存する。
+
+
+起動条件とバッチ順のレビューでは、dispatchの`fork_turns`を`all`にする変更、`model_override`の変更、実行requestのcasesとresponseのoutputsをともに逆順にする変更も、manifestの更新だけで検査を通った。起動条件2種類とバッチ順の再現テストを追加し、直前版は18テスト中、2メソッドの計3検査が失敗、修正後は全18テストが成功した。
+
+`dispatch_condition_sha256`はtask_nameごとにdispatchの項目全体を、前述と同じJSON正規化でSHA256にした索引。fork・モデル指定・起動指示を含む保存済み条件との差を検出する。`executor_ids`は実行役ごとのrequest.casesのID順で、バッチの件数と提示順を照合する。どちらも保存済み記録から作った事後の索引であり、実行前の固定時刻や実際の会話継承・モデル・提示順は証明しない。元のdispatch・request・responseは変更していない。索引と元記録を整合させた変更の検出には、引き続き別の信頼できる記録が必要になる。

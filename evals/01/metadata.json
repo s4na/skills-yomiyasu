@@ -126,5 +126,68 @@
     "f01": "afd370b0ee8aeb04d1a1b021383abfb985c04f26510380cb81d33daf8218c625"
   },
   "single_condition_sources": {},
-  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents."
+  "condition_binding_provenance": "Retrospective index of archived requests and documented scorer sources; not an independent pre-run timestamp. Condition digests cover request fields except cases. skill_path binds only the recorded path, not external file contents.",
+  "dispatch_condition_sha256": {
+    "r9ad": "a7e0ab18c945472a7ed301919065b7752b72d50ae3deb950c6603d57a808fcc8",
+    "rc38": "137447e27c553c4c92b9d83fa32d46bbf9061215ac9d79a2985f98bcc676fb2a",
+    "r4f2": "ff525ec0e4e5994bb7d22577a167f6001599af3394d574fc49dc9f61ba1ff379",
+    "r18a": "ee1b6b40e10f486d547e99eb251e0e6a842755c392a610c74b1c2da14e8626ec",
+    "r7d3": "253a92c3ef01d5681635339e789d68e0a7bc0e654ef2ff5a3a2b53031e3b70e3",
+    "rf01": "25a218c6cbf5c11b326bf75699c41c964c5f5778a7bba5988dfe3e79150c1392",
+    "s6be": "ee62c2572bd0dfc1d4d2df8246393aaf20a467ae4ad21916a51e4c401df2c565",
+    "s29e": "c925ca099f95950a3acf643f3504eb77e151d05c45df29fe3c66e9fa48812d3c",
+    "se11": "967adb4ec4677a699a9818ea59cc637ae4bbeeef03e8490478485eec1c3bae49",
+    "sa52": "b3c0595f8c62d74b1318ddede3537a7002069ad2e0615a3e0041bfadca916992"
+  },
+  "executor_ids": {
+    "9ad": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "c38": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "4f2": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "18a": [
+      "71c-01",
+      "71c-02",
+      "71c-03",
+      "71c-04",
+      "71c-05",
+      "71c-06"
+    ],
+    "7d3": [
+      "71c-01",
+      "71c-02",
+      "71c-03",
+      "71c-04",
+      "71c-05",
+      "71c-06"
+    ],
+    "f01": [
+      "71c-01",
+      "71c-02",
+      "71c-03",
+      "71c-04",
+      "71c-05",
+      "71c-06"
+    ]
+  },
+  "dispatch_batch_provenance": "Retrospective index of archived dispatch entries and executor request case order; not evidence of pre-run freezing or actual execution."
 }
