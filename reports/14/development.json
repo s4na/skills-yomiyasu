@@ -1,0 +1,559 @@
+{
+  "meaning": "Archived grades only; eligible means candidate critical scores are all 1 and no judge lowered criterion 5 or 6. Human adoption review is still required.",
+  "baseline": "a13y",
+  "candidate": "b24y",
+  "judges": [
+    "c35y",
+    "d46y"
+  ],
+  "critical_all_pass": {
+    "baseline": true,
+    "candidate": true
+  },
+  "candidate_eligible": true,
+  "counts": {
+    "improved": 2,
+    "stable": 28,
+    "regressed": 0,
+    "mixed": 0
+  },
+  "any_regression_count": 0,
+  "noncritical_any_regression_count": 0,
+  "cases": [
+    {
+      "case_id": "p61-holdout-02",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "improved",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 0.5,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 0.5,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "t05-dev-01",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "t05-dev-02",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "p61-dev-01",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "improved",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 0.5,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 0.5,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "p61-dev-02",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "c35y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "d46y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

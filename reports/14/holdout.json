@@ -1,0 +1,345 @@
+{
+  "meaning": "Archived grades only; eligible means candidate critical scores are all 1 and no judge lowered criterion 5 or 6. Human adoption review is still required.",
+  "baseline": "e57y",
+  "candidate": "f68y",
+  "judges": [
+    "g79y",
+    "h80y"
+  ],
+  "critical_all_pass": {
+    "baseline": true,
+    "candidate": true
+  },
+  "candidate_eligible": true,
+  "counts": {
+    "improved": 0,
+    "stable": 18,
+    "regressed": 0,
+    "mixed": 0
+  },
+  "any_regression_count": 0,
+  "noncritical_any_regression_count": 0,
+  "cases": [
+    {
+      "case_id": "t05-holdout-01",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "t05-holdout-02",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "t05-holdout-03",
+      "criteria": [
+        {
+          "criterion": 1,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 2,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 3,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 4,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 5,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        },
+        {
+          "criterion": 6,
+          "status": "stable",
+          "any_regression": false,
+          "observations": [
+            {
+              "judge": "g79y",
+              "baseline": 1,
+              "candidate": 1
+            },
+            {
+              "judge": "h80y",
+              "baseline": 1,
+              "candidate": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
