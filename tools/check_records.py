@@ -13,6 +13,12 @@ def indexed(items, label):
 
 def check_packets(run):
     metadata = json.loads((run / "metadata.json").read_text())
+    rubric = (run.parent / "protocol.md").read_text().split("## 合否")[1].split("## 比較")[0]
+    cases = {}
+    for filename in ("development.json", "holdout.json"):
+        path = run / filename
+        if path.exists():
+            cases.update(indexed(json.loads(path.read_text()), str(path)))
     aliases = metadata.get("aliases", {})
     if not aliases:
         aliases = {**metadata.get("development", {}), **metadata.get("holdout", {})}
@@ -34,6 +40,8 @@ def check_packets(run):
     for name in scorers:
         request = json.loads((run / name / "request.json").read_text())
         response = json.loads((run / name / "response.json").read_text())
+        if request["rubric"] != rubric:
+            raise ValueError(f"Scoring rubric mismatch: {run / name}")
         items = indexed(request["items"], name)
         scores = indexed(response["scores"], name)
         if items.keys() != scores.keys():
@@ -52,15 +60,25 @@ def check_packets(run):
                                 for field in ("input", "request"))]
             if not matching:
                 raise ValueError(f"Scoring source mismatch: {run / name}: {key}")
+            canonical = cases[case_id]
+            if any(item[field] != canonical[field] for field in ("input", "request", "checks")):
+                raise ValueError(f"Scoring case mismatch: {run / name}: {key}")
             values = scores[key]["values"]
             if len(values) != 6 or any(type(v) not in (int, float) or v not in (0, 0.5, 1) for v in values):
                 raise ValueError(f"Invalid scores: {run / name}: {key}")
+            if any(value < 1 for value in values) and not scores[key].get("evidence"):
+                raise ValueError(f"Missing scoring evidence: {run / name}: {key}")
 
 
 def check(root):
     rounds = sorted(path for path in (root / "evals").iterdir() if path.is_dir())
     if not rounds:
         raise ValueError("No evaluation manifest")
+    # Later rounds share the rubric frozen by the first round.
+    metadata = json.loads((root / "evals/01/metadata.json").read_text())
+    protocol_hash = hashlib.sha256((root / "evals/protocol.md").read_bytes()).hexdigest()
+    if protocol_hash != metadata["protocol_sha256"]:
+        raise ValueError("Evaluation protocol hash mismatch")
     for run in rounds:
         manifest = run / "manifest.json"
         if not manifest.is_file():
@@ -77,11 +95,6 @@ def check(root):
             if path.suffix == ".json":
                 json.loads(path.read_text())
         check_packets(run)
-    # Later rounds share the rubric frozen by the first round.
-    metadata = json.loads((root / "evals/01/metadata.json").read_text())
-    protocol_hash = hashlib.sha256((root / "evals/protocol.md").read_bytes()).hexdigest()
-    if protocol_hash != metadata["protocol_sha256"]:
-        raise ValueError("Evaluation protocol hash mismatch")
     skill = root / "skills/yomiyasu/SKILL.md"
     text = skill.read_text()
     if not text.startswith("---\nname: yomiyasu\ndescription: "):

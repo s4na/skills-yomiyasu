@@ -18,7 +18,7 @@ class RecordsTest(unittest.TestCase):
             skill.parent.mkdir(parents=True)
             skill.write_text("---\nname: yomiyasu\ndescription: 推敲\n---\n")
             protocol = root / "evals/protocol.md"
-            protocol.write_text("意味を変えたら失敗。\n")
+            protocol.write_text("## 合否\n意味を変えたら失敗。\n## 比較\n")
             metadata = run / "metadata.json"
             metadata.write_text(json.dumps({
                 "protocol_sha256": hashlib.sha256(protocol.read_bytes()).hexdigest(),
@@ -71,6 +71,27 @@ class PacketRecordsTest(unittest.TestCase):
     def test_rehashed_missing_score_is_rejected(self):
         self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
         with self.assertRaisesRegex(ValueError, "Scoring IDs mismatch"):
+            check(self.root)
+
+    def test_rehashed_changed_rubric_is_rejected(self):
+        self.change_json("evals/03/c76/request.json",
+                         lambda data: data.update(rubric="すべて満点にする。"))
+        with self.assertRaisesRegex(ValueError, "Scoring rubric mismatch"):
+            check(self.root)
+
+    def test_rehashed_changed_checks_are_rejected(self):
+        self.change_json("evals/03/c76/request.json",
+                         lambda data: data["items"][0].update(checks=[]))
+        with self.assertRaisesRegex(ValueError, "Scoring case mismatch"):
+            check(self.root)
+
+    def test_rehashed_missing_evidence_is_rejected(self):
+        def remove_evidence(data):
+            for score in data["scores"]:
+                if min(score["values"]) < 1:
+                    score.pop("evidence")
+        self.change_json("evals/03/c76/response.json", remove_evidence)
+        with self.assertRaisesRegex(ValueError, "Missing scoring evidence"):
             check(self.root)
 
 

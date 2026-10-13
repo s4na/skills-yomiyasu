@@ -8,5 +8,17 @@
     "rehashed different scoring text rejected",
     "rehashed missing score rejected"
   ],
-  "candidate_failed_assertions": []
+  "candidate_failed_assertions": [],
+  "post_publication": {
+    "baseline_commit": "fa2738a6ac3673d8b7be9a91183809902a10760e",
+    "baseline_test_exit": 1,
+    "candidate_test_exit": 0,
+    "tests": 8,
+    "baseline_failed_assertions": [
+      "rehashed changed rubric rejected",
+      "rehashed changed checks rejected",
+      "rehashed missing evidence rejected"
+    ],
+    "candidate_failed_assertions": []
+  }
 }

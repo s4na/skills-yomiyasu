@@ -1,4 +1,0 @@
-interface:
-  display_name: "日本語の推敲"
-  short_description: "意味と書き手の意図を保ち、必要な箇所だけ読みやすく整える"
-  default_prompt: "$yomiyasu でこの文章を読みやすく推敲してください。"
