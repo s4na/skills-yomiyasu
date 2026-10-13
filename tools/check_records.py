@@ -11,12 +11,15 @@ def indexed(items, label):
     return result
 
 
-def condition_digest(request):
-    # Freeze the archived execution instructions, excluding the case payload.
-    condition = {key: value for key, value in request.items() if key != "cases"}
-    encoded = json.dumps(condition, ensure_ascii=False, sort_keys=True,
+def json_digest(value):
+    encoded = json.dumps(value, ensure_ascii=False, sort_keys=True,
                          separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def condition_digest(request):
+    # Freeze the archived execution instructions, excluding the case payload.
+    return json_digest({key: value for key, value in request.items() if key != "cases"})
 
 
 def check_packets(run):
@@ -40,6 +43,15 @@ def check_packets(run):
     expected_agents = {"r" + name for name in executors} | {"s" + name for name in scorers}
     if {item["task_name"] for item in dispatch} != expected_agents or len(dispatch) != len(expected_agents):
         raise ValueError(f"Dispatch roster mismatch: {run}")
+    dispatch_conditions = metadata.get("dispatch_condition_sha256", {})
+    if set(dispatch_conditions) != expected_agents:
+        raise ValueError(f"Dispatch condition inventory mismatch: {run}")
+    for item in dispatch:
+        if json_digest(item) != dispatch_conditions[item["task_name"]]:
+            raise ValueError(f"Dispatch condition mismatch: {run}: {item['task_name']}")
+    executor_ids = metadata.get("executor_ids", {})
+    if set(executor_ids) != set(executors):
+        raise ValueError(f"Execution ID inventory mismatch: {run}")
     score_ids = metadata["score_ids"]
     if set(score_ids) != set(scorers):
         raise ValueError(f"Scoring inventory mismatch: {run}")
@@ -60,6 +72,8 @@ def check_packets(run):
             raise ValueError(f"Execution condition mismatch: {run / name}")
         inputs[name] = indexed(request["cases"], name)
         outputs[name] = indexed(response["outputs"], name)
+        if list(inputs[name]) != executor_ids[name]:
+            raise ValueError(f"Expected execution IDs mismatch: {run / name}")
         if inputs[name].keys() != outputs[name].keys():
             raise ValueError(f"Execution IDs mismatch: {run / name}")
     for name in scorers:

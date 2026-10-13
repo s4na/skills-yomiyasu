@@ -100,6 +100,25 @@ class PacketRecordsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing scoring source binding"):
             check(self.root)
 
+    def test_rehashed_dispatch_conditions_are_rejected(self):
+        for field, value in (("fork_turns", "all"), ("model_override", "different-model")):
+            with self.subTest(field=field):
+                original = (self.root / "evals/03/dispatch.json").read_text()
+                self.change_json("evals/03/dispatch.json",
+                                 lambda data: data[0].update({field: value}))
+                try:
+                    with self.assertRaisesRegex(ValueError, "Dispatch condition mismatch"):
+                        check(self.root)
+                finally:
+                    self.change_json("evals/03/dispatch.json",
+                                     lambda data: data.__setitem__(slice(None), json.loads(original)))
+
+    def test_rehashed_executor_batch_reordering_is_rejected(self):
+        self.change_json("evals/03/df8/request.json", lambda data: data["cases"].reverse())
+        self.change_json("evals/03/df8/response.json", lambda data: data["outputs"].reverse())
+        with self.assertRaisesRegex(ValueError, "Expected execution IDs mismatch"):
+            check(self.root)
+
     def test_rehashed_missing_score_is_rejected(self):
         self.change_json("evals/03/c76/response.json", lambda data: data["scores"].pop())
         with self.assertRaisesRegex(ValueError, "Scoring IDs mismatch"):
