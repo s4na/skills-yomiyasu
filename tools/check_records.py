@@ -66,15 +66,30 @@ def check_packets(run):
         source not in executors for source in single_sources.values()
     ):
         raise ValueError(f"Scoring source inventory mismatch: {run}")
+    single_cases = metadata.get("single_cases", {})
+    if set(single_cases) - set(executors) or set(single_cases.values()) - set(cases):
+        raise ValueError(f"Single-case inventory mismatch: {run}")
     outputs = {}
     inputs = {}
     for name in executors:
         request = json.loads((run / name / "request.json").read_text())
-        response = json.loads((run / name / "response.json").read_text())
         if condition_digest(request) != conditions[name]:
             raise ValueError(f"Execution condition mismatch: {run / name}")
-        inputs[name] = indexed(request["cases"], name)
-        outputs[name] = indexed(response["outputs"], name)
+        if name in single_cases:
+            case_id = single_cases[name]
+            case = cases[case_id]
+            canonical_request = (f"依頼：\n{case['request']}\n\n原文：\n{case['input']}"
+                                 f"\n\n改稿案：\n{case['draft']}")
+            if case["user_request"] != canonical_request:
+                raise ValueError(f"Single-case canonical request mismatch: {run / name}")
+            if request["user_request"] != case["user_request"]:
+                raise ValueError(f"Single-case request mismatch: {run / name}")
+            inputs[name] = {case_id: {field: case[field] for field in ("id", "input", "request")}}
+            outputs[name] = {case_id: {"text": (run / name / "response.txt").read_text()}}
+        else:
+            response = json.loads((run / name / "response.json").read_text())
+            inputs[name] = indexed(request["cases"], name)
+            outputs[name] = indexed(response["outputs"], name)
         if list(inputs[name]) != executor_ids[name]:
             raise ValueError(f"Expected execution IDs mismatch: {run / name}")
         if inputs[name].keys() != outputs[name].keys():
@@ -124,6 +139,11 @@ def check_packets(run):
             if not matching:
                 raise ValueError(f"Scoring source mismatch: {run / name}: {key}")
             canonical = cases[case_id]
+            if metadata.get("scoring_draft") and (
+                "draft" not in item or "draft" not in canonical
+                or item["draft"] != canonical["draft"]
+            ):
+                raise ValueError(f"Scoring draft mismatch: {run / name}: {key}")
             if any(item[field] != canonical[field] for field in ("input", "request", "checks")):
                 raise ValueError(f"Scoring case mismatch: {run / name}: {key}")
             values = scores[key]["values"]

@@ -1,0 +1,21 @@
+{
+  "purpose": "Exploration of missing-input behavior, not a quality-improvement claim or formal holdout evaluation. Hash-checked only; excluded from primary scoring aggregates.",
+  "executors": [
+    "y35x",
+    "z46x",
+    "a57x",
+    "b68x"
+  ],
+  "scorers": [
+    "c79x",
+    "d80x"
+  ],
+  "candidate": null,
+  "holdout_executed": false,
+  "unopened_holdout_sha256": "9a00f5b586e350ee048356120eb823f500678eeb45b065c5437b3fafa38efae8",
+  "holdout_content_archived": false,
+  "invocations": 6,
+  "model": "host inherited default; no override",
+  "fork_turns": "none",
+  "dispatch_provenance": "Parent-confirmed sent wrapper templates reconstructed retrospectively; not independent execution proof."
+}
