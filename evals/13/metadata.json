@@ -1,0 +1,169 @@
+{
+  "base_commit": "7abac43fa684e335aafdedf55b3c79eda43c2854",
+  "base_pr": 9,
+  "aliases": {
+    "A": "a13y",
+    "B": "b24y",
+    "C": "e57y",
+    "D": "f68y"
+  },
+  "executors": [
+    "a13y",
+    "b24y",
+    "e57y",
+    "f68y"
+  ],
+  "scorers": [
+    "c35y",
+    "d46y",
+    "g79y",
+    "h80y"
+  ],
+  "authored_drafts": [
+    "a13y",
+    "b24y",
+    "e57y",
+    "f68y"
+  ],
+  "raw_json_executors": [
+    "a13y",
+    "b24y",
+    "e57y",
+    "f68y"
+  ],
+  "draft_sources": {},
+  "single_cases": {},
+  "single_condition_sources": {},
+  "scoring_draft": true,
+  "executor_ids": {
+    "a13y": [
+      "p61-holdout-02",
+      "t05-dev-01",
+      "t05-dev-02",
+      "p61-dev-01",
+      "p61-dev-02"
+    ],
+    "b24y": [
+      "p61-holdout-02",
+      "t05-dev-01",
+      "t05-dev-02",
+      "p61-dev-01",
+      "p61-dev-02"
+    ],
+    "e57y": [
+      "t05-holdout-01",
+      "t05-holdout-02",
+      "t05-holdout-03"
+    ],
+    "f68y": [
+      "t05-holdout-01",
+      "t05-holdout-02",
+      "t05-holdout-03"
+    ]
+  },
+  "score_ids": {
+    "c35y": [
+      "p61-holdout-02-A",
+      "p61-holdout-02-B",
+      "t05-dev-01-A",
+      "t05-dev-01-B",
+      "t05-dev-02-A",
+      "t05-dev-02-B",
+      "p61-dev-01-A",
+      "p61-dev-01-B",
+      "p61-dev-02-A",
+      "p61-dev-02-B"
+    ],
+    "d46y": [
+      "p61-holdout-02-B",
+      "p61-holdout-02-A",
+      "t05-dev-01-B",
+      "t05-dev-01-A",
+      "t05-dev-02-B",
+      "t05-dev-02-A",
+      "p61-dev-01-B",
+      "p61-dev-01-A",
+      "p61-dev-02-B",
+      "p61-dev-02-A"
+    ],
+    "g79y": [
+      "t05-holdout-01-C",
+      "t05-holdout-01-D",
+      "t05-holdout-02-C",
+      "t05-holdout-02-D",
+      "t05-holdout-03-C",
+      "t05-holdout-03-D"
+    ],
+    "h80y": [
+      "t05-holdout-01-D",
+      "t05-holdout-01-C",
+      "t05-holdout-02-D",
+      "t05-holdout-02-C",
+      "t05-holdout-03-D",
+      "t05-holdout-03-C"
+    ]
+  },
+  "executor_condition_sha256": {
+    "a13y": "8e18668c7f4f7f601a81ae3aa11e0344f94252161e7e041fea58ae8762272754",
+    "b24y": "eb787120f7a452b6144e9f051802c0b780b71f700032cd51689aefab8358296a",
+    "e57y": "8e18668c7f4f7f601a81ae3aa11e0344f94252161e7e041fea58ae8762272754",
+    "f68y": "eb787120f7a452b6144e9f051802c0b780b71f700032cd51689aefab8358296a"
+  },
+  "dispatch_condition_sha256": {
+    "ra13y": "da3c2b9ec1c229dbf877ae510f9999896d65dc162758128a79d96f252520bbdd",
+    "rb24y": "aa2143db000a787fc748d29fb753c84b329fd456c7f56873a99d81df8fa2646e",
+    "re57y": "7d7b294d4d92c68a2d25b212f97437fbdf828f839e7260f4574771382d289640",
+    "rf68y": "b765c4a63cd38402fd1e4c7897e033ab6df15ebe2609f16422b33a49ddfea853",
+    "sc35y": "34c15b14cb5a5f6087a6d396389ad484c6b0afb63fe875034b7fa926533c7ee0",
+    "sd46y": "614a27de32b6a1aaf9d50765176351561a51385014c7f7a6a4fdd7804ec93dc0",
+    "sg79y": "0e35cb8addfb020e4b08ea4c9cd66373440e416edb5523ce4c1b9e957c174ec2",
+    "sh80y": "eb526f663da6819bd30a343a3397eacd0c75ebf799eba4137d3b8cefd33dbb09"
+  },
+  "model": "host inherited default; no override",
+  "duration_ms": null,
+  "tool_uses": null,
+  "candidate_sha256": "f589ca1d64d40a8659983aaf40e7967720ae10ab663436d672e18c629f363e39",
+  "holdout_source_sha256": "c356188f3cc3449caad5fc82d18b726132ddbbc7c57bae3a990e23cbfd629c48",
+  "instruction_utf8_bytes": {
+    "measurement": "Full instruction includes frontmatter and input/output contract; semantic body is text between frontmatter and input/output heading, stripped.",
+    "baseline_full": 1312,
+    "candidate_full": 1183,
+    "baseline_semantic_body": 414,
+    "candidate_semantic_body": 285
+  },
+  "canonical_provenance": "development.json combines previously used fixtures with t05/dev.json; holdout.json is an exact copy of t05/holdout.json. All drafts were authored fixtures, never previous executor outputs.",
+  "score_ids_provenance": "Retrospective inventory of archived requests; not independent pre-run timestamp.",
+  "condition_index_provenance": "Retrospective inventory of archived request conditions; not proof of pre-run fixation or isolation.",
+  "dispatch_batch_provenance": "Retrospective reconstruction from parent-confirmed sent wrapper templates and task names; not independent execution proof.",
+  "batch_dependence": "Each condition was executed as one batch per split. Cases within a batch are not independent.",
+  "audit_provenance": "Parent-reported audit chronology; no independent timestamp proof.",
+  "invocations": {
+    "before_continuation": 101,
+    "round09_including_invalid_scoring": 22,
+    "exploration10": 6,
+    "invalid_round11": 10,
+    "round12": 8,
+    "this_round": 9,
+    "cumulative": 156,
+    "continuation_used": 55,
+    "continuation_limit": 72,
+    "includes": "Eight execution/scoring agents plus one interface agent; invalid scoring/case-set executions included; independent review excluded."
+  },
+  "interface_references": [
+    "interface/i91y"
+  ],
+  "interface_dispatch_sha256": "10a588d20ba0e1e7a86f6d05c281ea467987e96c12b81062fd51b0423ae649d0",
+  "interface_provenance": "One new labeled single-input run using the candidate. Separate from quality scoring; dispatch reconstructed from parent-confirmed wrapper.",
+  "case_audits": [
+    {
+      "agent": "audit_t05",
+      "scope": "All t05 development and holdout cases",
+      "result": "No issues reported before execution; fresh auditor saw neither candidate nor outputs."
+    },
+    {
+      "agent": "audit_dev13",
+      "scope": "All five development cases, including previously used fixtures",
+      "result": "No issues reported after development execution and before scoring; the fresh auditor saw neither candidate nor outputs."
+    }
+  ]
+}

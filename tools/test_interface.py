@@ -8,11 +8,7 @@ class InterfaceTest(unittest.TestCase):
 
     def test_distributed_skill_matches_executed_fixture(self):
         repo = Path(__file__).resolve().parents[1]
-        fixture = repo / 'evals/11/interface/r24x/request.json'
-        if not fixture.exists():
-            fixture = repo / 'evals/07/interface/de86/request.json'
-        if not fixture.exists():
-            fixture = repo / 'evals/06/interface/cd75/request.json'
+        fixture = repo / 'evals/13/f68y/request.json'
         request = json.loads(fixture.read_text())
         self.assertEqual((repo / 'skills/yomiyasu-verify/SKILL.md').read_text(), request['skill'])
 
@@ -35,7 +31,6 @@ class InterfaceTest(unittest.TestCase):
         for name in ('q13x', 'r24x'):
             root = repo / 'evals/11/interface' / name
             packet = json.loads((root / 'request.json').read_text())
-            self.assertEqual(packet['skill'], (repo / 'skills/yomiyasu-verify/SKILL.md').read_text())
             result = json.loads((root / 'response.txt').read_text())
             self.assertEqual(set(result), {'outputs'})
             self.assertEqual([row['id'] for row in result['outputs']], [case['id'] for case in packet['cases']])
@@ -45,6 +40,17 @@ class InterfaceTest(unittest.TestCase):
                     self.assertEqual(json.loads(row['text']), json.loads(case['input']))
                 else:
                     self.assertEqual(row['text'], case['input'])
+
+    def test_current_single_input_keeps_natural_text(self):
+        repo = Path(__file__).resolve().parents[1]
+        root = repo / 'evals/13/interface/i91y'
+        packet = json.loads((root / 'request.json').read_text())
+        self.assertEqual(packet['skill'], (repo / 'skills/yomiyasu-verify/SKILL.md').read_text())
+        source = next(case for case in json.loads((repo / 'evals/12/holdout.json').read_text())
+                      if case['id'] == 's94_keep_json')
+        self.assertEqual(packet['user_request'], source['user_request'])
+        result = json.loads((root / 'response.txt').read_text())
+        self.assertEqual(result, {'text': source['draft']})
 
     def test_previous_response_has_no_json_mapping(self):
         with self.assertRaises(json.JSONDecodeError):
