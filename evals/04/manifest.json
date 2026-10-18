@@ -1,0 +1,10 @@
+{
+  "id": "named-subject-retention-holdout-04",
+  "frozen_before_candidate_change": true,
+  "scenario_sha256": "c31f42e4cb1bece28c5a11844e1b30da50c45d64a6e0a8e22a2fdf3093b4e38a",
+  "candidate_before_change_commit": "e40560fbb03fbcb281d3145e11600b2ca6ea79a5",
+  "candidate_before_change_sha256": "dec71fb56d51527eca6832042dfeac891872174b53e7c28b829f89ada3973ece",
+  "candidate_after_change_sha256": "6e90a43b8da5071422cc12c603aa51584d68a91c178338f3f99a97e8c1ccc2bd",
+  "candidate_after_change_snapshot": "run-01/candidate-SKILL.md",
+  "case_count": 1
+}
