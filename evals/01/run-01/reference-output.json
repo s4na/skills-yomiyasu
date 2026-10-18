@@ -1,0 +1,14 @@
+[
+  {
+    "id": "median_structural_repair",
+    "final_response": "### 書き直した本文\n\n今朝の定例で、修正後に再テストする時間を確保するため、来週の公開を一週間延期すると決めました。先週からテスト環境でログインできない不具合が続いており、昨日の確認でも再現しました。影響範囲はまだ調査中です。\n\n---\n\n### 変えたところ\n- 「修正後に再テストする時間を確保するためです」を延期の決定に結び、理由のかかり先が分かる形にしました。\n\n### 確認の記録\n- 書き手・読み手・場面: 書き手: 決めていない／読み手: 社内（指定、知識段階は決めていない）／場面: incident（推定、状況共有）\n- 実行した検査: lint、diff、最終稿の照合\n- 実行しなかった検査: なし\n- 硬化の検査: 候補なし\n- 勢いの検査: 候補なし\n- 見直し候補: 原文 0件 → 最終稿 0件（件数は点数ではなく、増減は読みやすさの良し悪しを示さない）\n- yomiyasu-check: executed via=verify run=20261018T215735Z-17abb5cd attempt=1 final=text-sha256:98f5ba0f9e7e mode=rewrite doc_type=incident checks=lint,diff meaning_risk=1 replay=skipped"
+  },
+  {
+    "id": "edge_useful_ambiguity_noop",
+    "final_response": "### 書き直した本文\n\n玄関に、濡れた傘が一本。母の靴はない。「先に寝てて」のメモだけが、テーブルの端で少し丸まっていた。帰ってくるのは、今夜なのか、もう少し先なのか。窓の外で、雨はまだ止まない。\n\n---\n\n### 変えたところ\n- なし\n\n### 確認の記録\n- 書き手・読み手・場面: 書き手: 決めていない／読み手: 決めていない／場面: 随筆（指定）\n- 実行した検査: lint、diff、最終稿の照合\n- 実行しなかった検査: なし\n- 硬化の検査: 候補なし\n- 勢いの検査: 候補なし\n- 見直し候補: 原文 1件 → 最終稿 1件（件数は点数ではなく、増減は読みやすさの良し悪しを示さない）\n- yomiyasu-check: executed via=verify run=20261018T215735Z-8c52db2e attempt=1 final=text-sha256:59760b459369 mode=rewrite doc_type=essay checks=lint,diff meaning_risk=0 replay=skipped\nエッセイと判断したので、文の個性を残しました"
+  },
+  {
+    "id": "edge_nested_scope_policy",
+    "final_response": "### 書き直した本文\n\n返金の申請は決済から8日以内に受け付けます。年額プランは利用開始後、返金できません。ただし、二重決済の場合は、プランや申請時期にかかわらず返金します。\n\n---\n\n### 変えたところ\n- 二重決済の返金は、プランや申請時期にかかわらないことを明記しました。\n- 「返金の申請は、」→「返金の申請は」（短い主題の後の読点を外しました）\n\n### 確認の記録\n- 書き手・読み手・場面: 書き手: 決めていない／読み手: 決めていない／場面: サポートページ（指定、manual 推定）\n- 実行した検査: lint、diff、資料との照合、最終稿の照合\n- 実行しなかった検査: なし\n- 硬化の検査: 候補なし\n- 勢いの検査: 候補なし\n- 見直し候補: 原文 1件 → 最終稿 0件（件数は点数ではなく、増減は読みやすさの良し悪しを示さない）\n- yomiyasu-check: executed via=verify run=20261018T215736Z-6531c7e9 attempt=1 final=text-sha256:4027e42bacfd mode=rewrite doc_type=manual checks=lint,diff,materials meaning_risk=0 replay=skipped"
+  }
+]
