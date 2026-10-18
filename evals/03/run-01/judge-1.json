@@ -1,0 +1,32 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "scores": {
+    "A": {
+      "requirements": [
+        {"id": "R1", "result": "○", "evidence": "『連絡を行います』を『連絡します』にしており、重い言い回しを自然に最小限修正している。"},
+        {"id": "R2", "result": "○", "evidence": "『会議の開始時間が変更になったこと』と『参加者に連絡します』の両方を保っている。"},
+        {"id": "R3", "result": "○", "evidence": "変更後の時刻、追加の主体、約束を含めていない。"},
+        {"id": "R4", "result": "○", "evidence": "推敲した本文だけを返している。"}
+      ],
+      "critical_all_pass": true,
+      "readability": {"rating": "good", "evidence": "冗長な『連絡を行います』が簡潔な『連絡します』になり、文意を保った自然な文。"},
+      "edit_scope": {"rating": "minimal_and_appropriate", "evidence": "不自然な述語表現だけを置き換えている。"},
+      "format_fit": {"rating": "full", "evidence": "本文のみ。"},
+      "unresolved_points": []
+    },
+    "B": {
+      "requirements": [
+        {"id": "R1", "result": "○", "evidence": "『連絡を行います』を『連絡します』にしており、重い言い回しを自然に最小限修正している。"},
+        {"id": "R2", "result": "○", "evidence": "『会議の開始時間が変更になったこと』と『参加者に連絡します』の両方を保っている。"},
+        {"id": "R3", "result": "○", "evidence": "変更後の時刻、追加の主体、約束を含めていない。"},
+        {"id": "R4", "result": "○", "evidence": "推敲した本文だけを返している。"}
+      ],
+      "critical_all_pass": true,
+      "readability": {"rating": "good", "evidence": "冗長な『連絡を行います』が簡潔な『連絡します』になり、文意を保った自然な文。"},
+      "edit_scope": {"rating": "minimal_and_appropriate", "evidence": "不自然な述語表現だけを置き換えている。"},
+      "format_fit": {"rating": "full", "evidence": "本文のみ。"},
+      "unresolved_points": []
+    }
+  },
+  "comparison": {"winner": "tie", "reason": "A と B は同一文で、各要件・可読性・編集範囲・形式適合も同じ。"}
+}

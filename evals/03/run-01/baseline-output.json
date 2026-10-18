@@ -1,0 +1,10 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "output": "会議の開始時間が変更になったことを参加者に連絡します。",
+  "execution_notes": {
+    "interpretation": "『連絡を行います』の重複した名詞＋行う表現を『連絡します』に整え、読点も外して目的語と相手を自然につないだ。",
+    "hesitation": "なし。依頼は意味・情報を維持した文面の自然化で、文意は明確。",
+    "inferred_decision_latitude": "語句と読点の最小限の調整。主体や文体、伝達内容を追加・変更しない。",
+    "retries": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "natural-polish-wording-holdout-03",
+  "frozen_before_candidate_change": true,
+  "scenario_sha256": "63a7f83d1bc9f09cc4af2ed3273fde77a4a0ee6a7af7715bc59ab9be77a8c579",
+  "candidate_before_change_commit": "ffc4a972b4ac7324c90ffe26e93cd0524b8ab727",
+  "candidate_before_change_sha256": "06dbf8cee9abaeb33c457363249095d19280514cd62f228b0467faa78056fcf2",
+  "candidate_after_change_sha256": "dec71fb56d51527eca6832042dfeac891872174b53e7c28b829f89ada3973ece",
+  "candidate_after_change_snapshot": "run-01/candidate-SKILL.md",
+  "reference": {
+    "repository": "nanaism/yomiyasu",
+    "version": "2.0.1",
+    "commit": "84e1f5b15e497538fcfe19ab7e9c6f6d138f19ff"
+  },
+  "case_count": 1
+}

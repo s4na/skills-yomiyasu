@@ -1,0 +1,22 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "purpose": "『自然に整えて』という依頼で、意味関係の問題がなく語句だけが不自然な文を、構造重視のスキルが最小限に推敲できるかを評価する。",
+  "user_request": "次の文を自然に整えてください。意味や情報は変えず、文だけ返してください。",
+  "source_text": "会議の開始時間が変更になったことを、参加者に連絡を行います。",
+  "requirements": [
+    {"id": "R1", "critical": true, "requirement": "『連絡を行います』の不自然に重い言い回しを、自然な日本語に最小限修正する。", "intent": "自然な言い回しを求める依頼に対して表層修正が許可されるかを測る。"},
+    {"id": "R2", "critical": true, "requirement": "会議開始時刻が変更されたことと、参加者へ連絡することを保つ。", "intent": "表層修正の際の内容保持を測る。"},
+    {"id": "R3", "critical": true, "requirement": "変更後の具体的な開始時刻や追加の主体・約束を作らない。", "intent": "根拠のない情報追加を検出する。"},
+    {"id": "R4", "critical": false, "requirement": "依頼に従い推敲本文だけを返す。", "intent": "指定された返答形式への適合を測る。"}
+  ],
+  "evaluation_notes": {
+    "do_not_require_exact_wording": true,
+    "judge_by": "言い回しの自然さ、意味情報の保持、最小編集、依頼形式",
+    "acceptable_example": "会議の開始時間が変更になったことを、参加者に連絡します。",
+    "critical_failure_examples": [
+      "不自然な『連絡を行います』をそのまま返す",
+      "会議開始時刻の変更や参加者への連絡内容を変える",
+      "原文にない具体的な時刻や約束を追加する"
+    ]
+  }
+}
