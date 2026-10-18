@@ -1,0 +1,14 @@
+{
+  "id": "structural-yomiyasu-v1",
+  "frozen_before_candidate": true,
+  "reference": {
+    "repository": "nanaism/yomiyasu",
+    "version": "2.0.1",
+    "commit": "84e1f5b15e497538fcfe19ab7e9c6f6d138f19ff",
+    "skill_path": "skills/yomiyasu/SKILL.md"
+  },
+  "scenario_file": "scenarios.json",
+  "scenario_sha256": "26610894978ba3a3629b0c1d82f200f75a53cd5465b303dc90dec5b873e03440",
+  "scenario_count": 3,
+  "candidate_path": "skills/yomiyasu/SKILL.md"
+}
