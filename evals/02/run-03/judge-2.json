@@ -1,0 +1,71 @@
+{
+  "id": "holdout_jp_reason_attachment_venue_accessibility_01",
+  "candidates": {
+    "A": {
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "○",
+          "evidence": "「会場変更の目的は…」と明示し、段差のない経路の案内を会場変更の目的に直接結び付けている。"
+        },
+        {
+          "id": "R2",
+          "status": "○",
+          "evidence": "「手話通訳の手配が完了した回に限り」が、申込者への確定案内を送る行為に明確にかかっている。"
+        },
+        {
+          "id": "R3",
+          "status": "○",
+          "evidence": "「会場変更後」に案内を送る順序を維持している。"
+        },
+        {
+          "id": "R4",
+          "status": "○",
+          "evidence": "本文に元の運営上の事実を超える約束や条件を加えていない。"
+        }
+      ],
+      "critical_all_pass": true,
+      "readability_1_to_5": 5,
+      "edit_scope_1_to_5": 5,
+      "unresolved_points": [],
+      "output_format_fit": {
+        "rating": "○",
+        "evidence": "依頼に沿った推敲後の本文を簡潔に提示している。"
+      }
+    },
+    "B": {
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "○",
+          "evidence": "本文で「段差のない経路を案内するため」を会場変更の前に置き、目的が会場変更にかかる形にしている。"
+        },
+        {
+          "id": "R2",
+          "status": "○",
+          "evidence": "「会場変更後は…手配が完了した回に限り…確定案内を送ってください」と条件を案内送信に明確にかけている。"
+        },
+        {
+          "id": "R3",
+          "status": "○",
+          "evidence": "「会場変更後は」として元の順序を保っている。"
+        },
+        {
+          "id": "R4",
+          "status": "○",
+          "evidence": "書き直した本文は元の運営上の事実を超える約束や条件を加えていない。"
+        }
+      ],
+      "critical_all_pass": true,
+      "readability_1_to_5": 3,
+      "edit_scope_1_to_5": 3,
+      "unresolved_points": [
+        "本文外に、推定した読み手や実施した検査など、依頼にないメタ情報が多数あり、検査の実施自体は出力から確認できない。これらは本文の要件達成を変えないが、不要な主張を含む。"
+      ],
+      "output_format_fit": {
+        "rating": "partial",
+        "evidence": "推敲本文は明確だが、変更点と詳細な検査記録を追加しており、依頼された運営メモの整文に対して過剰な構成になっている。"
+      }
+    }
+  }
+}

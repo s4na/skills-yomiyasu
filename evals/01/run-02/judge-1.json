@@ -1,0 +1,104 @@
+{
+  "run": "run-02",
+  "cases": [
+    {
+      "id": "median_structural_repair",
+      "A": {
+        "requirements": [
+          {"mark": "○", "critical": true, "evidence": "『修正後に再テストする時間を確保するため、来週の公開を一週間延期』とし、再テスト時間の確保を延期の目的として明記している。"},
+          {"mark": "○", "critical": true, "evidence": "『先週から…不具合が続いて』および『昨日の確認でも再現』を保持。"},
+          {"mark": "○", "critical": true, "evidence": "『影響範囲はまだ調査中』をそのまま保持。"},
+          {"mark": "partial", "critical": false, "evidence": "本文自体は簡潔で新事実も足していないが、変更点・確認記録・検査に関する欄が短い社内状況共有の回答に対して過剰。"}
+        ],
+        "critical_all_yes": true,
+        "readability": 4,
+        "edit_scope": 4,
+        "unresolved_points": [],
+        "output_format_fit": 2,
+        "output_format_evidence": "書き直し本文は明瞭だが、依頼された短い共有文に不要な変更説明と検査記録が付属する。"
+      },
+      "B": {
+        "requirements": [
+          {"mark": "partial", "critical": true, "evidence": "不具合の再現と再テスト時間確保は『再現したため…時間を確保します』でつながるが、時間確保が一週間延期の目的だとは明示されず、延期判断との因果がやや分離して読める。"},
+          {"mark": "○", "critical": true, "evidence": "先週から続いていることと昨日も再現したことを保持。"},
+          {"mark": "○", "critical": true, "evidence": "影響範囲は調査中と明記。"},
+          {"mark": "○", "critical": false, "evidence": "簡潔な社内共有の文体で、担当者・期限・完了保証を加えていない。"}
+        ],
+        "critical_all_yes": false,
+        "readability": 4,
+        "edit_scope": 5,
+        "unresolved_points": ["延期が再テスト時間の確保を目的とする関係を、決定文に直接結び付けるとさらに明確。"],
+        "output_format_fit": 5,
+        "output_format_evidence": "依頼どおり、短い状況共有本文だけを提示。"
+      }
+    },
+    {
+      "id": "edge_useful_ambiguity_noop",
+      "A": {
+        "requirements": [
+          {"mark": "○", "critical": true, "evidence": "本文は母の帰宅時期や不在理由を特定・推測していない。"},
+          {"mark": "○", "critical": true, "evidence": "本文を原文のまま保ち、不在と待つ気配の余韻を説明で解消していない。"},
+          {"mark": "○", "critical": false, "evidence": "短い断片のリズムと『先に寝てて』のメモを保持。"},
+          {"mark": "○", "critical": false, "evidence": "本文に変更を加えず『変えたところ なし』としている。"}
+        ],
+        "critical_all_yes": true,
+        "readability": 3,
+        "edit_scope": 5,
+        "unresolved_points": [],
+        "output_format_fit": 2,
+        "output_format_evidence": "本文は適切だが、確認記録や末尾の『エッセイと判断したので…』は依頼された随筆本文に不要な付加物。"
+      },
+      "B": {
+        "requirements": [
+          {"mark": "○", "critical": true, "evidence": "帰宅時期・不在理由を追加せず、曖昧さを保持。"},
+          {"mark": "○", "critical": true, "evidence": "不在と待つ気配を原文のまま残し、説明を加えていない。"},
+          {"mark": "○", "critical": false, "evidence": "短い断片のリズムとメモを保持。"},
+          {"mark": "○", "critical": false, "evidence": "原文をそのまま提示し、不要な変更をしていない。"}
+        ],
+        "critical_all_yes": true,
+        "readability": 5,
+        "edit_scope": 5,
+        "unresolved_points": [],
+        "output_format_fit": 5,
+        "output_format_evidence": "随筆本文のみで、依頼の余韻と形式に合う。"
+      }
+    },
+    {
+      "id": "edge_nested_scope_policy",
+      "A": {
+        "requirements": [
+          {"mark": "○", "critical": true, "evidence": "8日以内の通常条件、利用開始後の年額プラン制限、二重決済の例外という条件関係を保持。二重決済には『プランや申請時期にかかわらず』と明示。"},
+          {"mark": "○", "critical": true, "evidence": "『ただし』の例外に『プランや申請時期にかかわらず』を付け、両制限から独立させている。"},
+          {"mark": "○", "critical": true, "evidence": "年額プランの制限は『利用開始後』に限定。"},
+          {"mark": "○", "critical": false, "evidence": "期限・条件を増やさず、指定された例外の適用範囲を明文化。"}
+        ],
+        "critical_all_yes": true,
+        "readability": 4,
+        "edit_scope": 5,
+        "unresolved_points": [],
+        "output_format_fit": 2,
+        "output_format_evidence": "本文はサポートページ向けに明確だが、依頼本文以外の変更説明・検査記録が付属。"
+      },
+      "B": {
+        "requirements": [
+          {"mark": "○", "critical": true, "evidence": "通常申請の8日条件、年額プランの利用開始後制限、二重決済の無条件返金をそれぞれ明確に表す。"},
+          {"mark": "○", "critical": true, "evidence": "二重決済を独立文にし、『プランや申請時期にかかわらず』として両制限の適用外と明示。"},
+          {"mark": "○", "critical": true, "evidence": "年額プラン制限を利用開始後に限定。"},
+          {"mark": "○", "critical": false, "evidence": "条件の追加はなく、通常申請と二重決済の適用範囲が読み取りやすい。"}
+        ],
+        "critical_all_yes": true,
+        "readability": 5,
+        "edit_scope": 5,
+        "unresolved_points": [],
+        "output_format_fit": 5,
+        "output_format_evidence": "サポートページ向けの本文だけを、適用範囲が分かる形で提示。"
+      }
+    }
+  ],
+  "overall": {
+    "preferred_output": "B",
+    "summary": "Bは3ケースすべてで本文のみを簡潔に提示し、固定要件を満たす。ケース1のBだけ、再テスト時間の確保を延期目的に明示的に結び付ける点でわずかに曖昧。Aは本文品質は概ね良好だが、各ケースで依頼外の確認記録などを付加し、ケース2では説明の一文まで追加している。",
+    "critical_all_yes_by_candidate": {"A": true, "B": false},
+    "main_unresolved_issue": "ケース1のBは延期と再テスト時間確保の因果をより直接に書く余地がある。"
+  }
+}
