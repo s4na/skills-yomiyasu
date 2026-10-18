@@ -1,0 +1,13 @@
+{
+  "id": "relationship-attachment-holdout-02",
+  "frozen_before_candidate_change": true,
+  "scenario_sha256": "f5c0b0eb202969395378d077e38d79c75c752f53ca8607d7cd73321e23598184",
+  "candidate_before_change_commit": "85e7c8977d07eecf5c6379244749ea2575f32435",
+  "candidate_before_change_sha256": "6d3f90e9551eb79592527503419f1f34b07ec3b2ddb3609f14b6383bbefc870a",
+  "reference": {
+    "repository": "nanaism/yomiyasu",
+    "version": "2.0.1",
+    "commit": "84e1f5b15e497538fcfe19ab7e9c6f6d138f19ff"
+  },
+  "case_count": 1
+}

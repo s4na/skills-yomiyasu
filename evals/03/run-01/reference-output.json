@@ -1,0 +1,10 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "output": "会議の開始時間が変更になったことを、参加者に連絡します。",
+  "execution_notes": {
+    "interpretation": "依頼文が指定されていないため、ケースIDが示す語句だけの推敲として扱い、原文の意味を保って不自然な『連絡を行います』を整えた。",
+    "hesitation": "なし。",
+    "inferred_decision_latitude": "低い。内容や情報を追加せず、述語表現のみを簡潔にした。",
+    "retries": 0
+  }
+}

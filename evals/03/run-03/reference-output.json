@@ -1,0 +1,42 @@
+{
+  "case_id": "natural-reference-verified-run03",
+  "reference": {
+    "repository": "nanaism/yomiyasu",
+    "version": "2.0.1",
+    "skill_path": "skills/yomiyasu/SKILL.md",
+    "checkout": "/tmp/yomiyasu-reference-84e1f5b"
+  },
+  "request": "次の文を自然に整えてください。意味や情報は変えず、文だけ返してください。",
+  "source": "会議の開始時間が変更になったことを、参加者に連絡を行います。",
+  "final_output": "会議の開始時間が変更になったことを参加者に連絡します。",
+  "execution_notes": [
+    "文書種別・読者・文書の立場を指定または確定できないため、--doc-type と --stance は省略。",
+    "指定されたワークフローどおり、原文lintを先に1回、run --stdin --fact-gapsを1回、最終稿を変更せずverify --final -を1回実行。",
+    "すべて一時ディレクトリ内で実行し、リポジトリを変更していない。",
+    "verifyの後に最終稿を変更していない。"
+  ],
+  "command_outcomes": [
+    {
+      "step": "lint_original",
+      "command": "python3 /tmp/yomiyasu-reference-84e1f5b/skills/yomiyasu/scripts/yomiyasu_lint.py original.md",
+      "exit_code": 0,
+      "stdout": "表現・書式の検査を実行しました。\n見直し候補: 0件\nこの検査では、意味の保持と読者にとっての分かりやすさは判定していません。\n",
+      "stderr": ""
+    },
+    {
+      "step": "run",
+      "command": "python3 /tmp/yomiyasu-reference-84e1f5b/skills/yomiyasu/scripts/yomiyasu_check.py run --stdin --fact-gaps --state-dir <temporary>/yomiyasu-state",
+      "exit_code": 0,
+      "stdout": "検査を実行しました（1回目）。規則に当たる候補はありません。全文差分で意図しない変更がないかを確かめ、直すなら1回まで、直さないなら提出の直前に、本文を変えずに、最終稿だけを標準入力から verify --state-dir \"/tmp/yomiyasu-natural-reference-verified-run03.G2YR3s/yomiyasu-state\" --final - に渡して1回実行してください。\nyomiyasu-check: executed via=run run=20261018T222056Z-d28378fc attempt=1 final=text-sha256:cb3246609cea mode=rewrite checks=lint,diff meaning_risk=0\n実行した検査: lint（最終稿）候補0件、diff（原文→最終稿）変更あり 候補0件（うち意味が変わる恐れ0件）、事実の穴の候補0件\nこの記録は検査を実行したことを示すだけで、意味が保たれたことや読みやすさの合格を示すものではありません。\n記録: /tmp/yomiyasu-natural-reference-verified-run03.G2YR3s/yomiyasu-state/runs/20261018T222056Z-d28378fc/attempt-1.json\n硬化の検査: 候補なし\n勢いの検査: 候補なし\n慎重表現の検査: 候補なし\n値の検査: 候補なし\n見直し候補: 原文 0件 → 最終稿 0件（lint の規則に当たった数で、点数ではありません。増えても減っても読みやすさの良し悪しは示しません）\n\n■ 直した箇所（1か所。元と後）\n@ 元1行目 → 後1行目（本文）\n  元: 会議の開始時間が変更になったことを、参加者に連絡を行います。\n  後: 会議の開始時間が変更になったことを参加者に連絡します。\n- 省いていない元と後は下の「■ 全文差分」と、記録と同じフォルダの attempt-1.diff.txt にあります。\n\n■ 事実の穴の候補（0件。比喩や程度の語だけで、中身や値が書かれていないかもしれない所です。根拠に中身が書かれているときだけ補い、なければ残すか、書き手への問いにしてください。候補は一部だけです）\n\n■ 全文差分（変更 1か所。省略していません）\n@ 元1行目 → 後1行目（本文）\n  元: 会議の開始時間が変更になったことを、参加者に連絡を行います。\n  後: 会議の開始時間が変更になったことを参加者に連絡します。\n  差: 会議の開始時間が変更になったことを[-、-]参加者に連絡[-を行い-]{+し+}ます。\n\n検査を実行しました（1回目）。規則に当たる候補はありません。全文差分で意図しない変更がないかを確かめ、直すなら1回まで、直さないなら提出の直前に、本文を変えずに、最終稿だけを標準入力から verify --state-dir \"/tmp/yomiyasu-natural-reference-verified-run03.G2YR3s/yomiyasu-state\" --final - に渡して1回実行してください。\nyomiyasu-check: executed via=run run=20261018T222056Z-d28378fc attempt=1 final=text-sha256:cb3246609cea mode=rewrite checks=lint,diff meaning_risk=0\n",
+      "stderr": ""
+    },
+    {
+      "step": "verify",
+      "command": "printf '%s\\n' '会議の開始時間が変更になったことを参加者に連絡します。' | python3 /tmp/yomiyasu-reference-84e1f5b/skills/yomiyasu/scripts/yomiyasu_check.py verify --final - --state-dir <temporary>/yomiyasu-state",
+      "exit_code": 0,
+      "stdout": "この最終稿に必要な検査（lint、diff）を実行した記録があり、最終稿のハッシュが記録と合いました。合格の判定ではありません。完了報告を付けるときは、この出力の2行目を写してください。\nyomiyasu-check: executed via=verify run=20261018T222056Z-d28378fc attempt=1 final=text-sha256:cb3246609cea mode=rewrite checks=lint,diff meaning_risk=0 replay=skipped\n記録: /tmp/yomiyasu-natural-reference-verified-run03.G2YR3s/yomiyasu-state/runs/20261018T222056Z-d28378fc/attempt-1.json\n記録の中身: 見直し候補 最終稿 0件、直した箇所 1か所（原文の件数と元と後は run の出力にあります）\n",
+      "stderr": ""
+    }
+  ],
+  "temporary_directory": "/tmp/yomiyasu-natural-reference-verified-run03.G2YR3s"
+}

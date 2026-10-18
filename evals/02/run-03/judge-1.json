@@ -1,0 +1,82 @@
+{
+  "packet_id": "holdout_jp_reason_attachment_venue_accessibility_01",
+  "scoring_basis": "提供された依頼・原文・固定要件・匿名出力のみ。要件は文面上の効果で判定。",
+  "scale": {
+    "requirement_marks": [
+      "○",
+      "partial",
+      "×"
+    ],
+    "readability": "1=読みにくい、5=読みやすい",
+    "edit_scope": "1=依頼に対し過不足が大きい、5=依頼に対し適切"
+  },
+  "candidates": {
+    "A": {
+      "requirements": [
+        {
+          "id": "R1",
+          "mark": "○",
+          "evidence": "「参加者に段差のない経路を案内するため、市民講座の会場を変更します」とし、目的を会場変更に直接結び付けている。"
+        },
+        {
+          "id": "R2",
+          "mark": "○",
+          "evidence": "「手話通訳の手配が完了した回に限り」が「申込者へ確定案内を送ってください」にかかる形で保持されている。"
+        },
+        {
+          "id": "R3",
+          "mark": "○",
+          "evidence": "「会場変更後は」として、会場変更の後に確定案内を送る順序を保持している。"
+        },
+        {
+          "id": "R4",
+          "mark": "○",
+          "evidence": "運営内容の本文には、指定された事実を超える運営上の約束や条件を加えていない。"
+        }
+      ],
+      "all_critical_requirements_pass": true,
+      "readability": 2,
+      "edit_scope": 2,
+      "unresolved_points": [
+        "本文以外に変えたところ・確認の記録が付加されており、依頼された推敲に比べて出力が過剰。",
+        "「実行した検査」や検査識別子等の記録は、依頼・原文から確認できない追加情報であり、推敲本文と区別しても根拠が示されていない。"
+      ],
+      "output_format_compliance": {
+        "mark": "partial",
+        "evidence": "書き直した本文は提示されているが、依頼されていない説明・検査記録が大きく付加されている。"
+      }
+    },
+    "B": {
+      "requirements": [
+        {
+          "id": "R1",
+          "mark": "○",
+          "evidence": "「会場変更の目的は」と明示して、段差のない経路を案内することを会場変更の目的としている。"
+        },
+        {
+          "id": "R2",
+          "mark": "○",
+          "evidence": "「手話通訳の手配が完了した回に限り」が申込者への確定案内送信にかかることが文の構造上明瞭。"
+        },
+        {
+          "id": "R3",
+          "mark": "○",
+          "evidence": "「会場変更後」として、確定案内送信の時点を会場変更後に保っている。"
+        },
+        {
+          "id": "R4",
+          "mark": "○",
+          "evidence": "原文の運営上の事実・条件の範囲内で言い換えており、新たな約束や条件はない。"
+        }
+      ],
+      "all_critical_requirements_pass": true,
+      "readability": 5,
+      "edit_scope": 5,
+      "unresolved_points": [],
+      "output_format_compliance": {
+        "mark": "○",
+        "evidence": "書き直し本文のみを簡潔に提示し、依頼に沿っている。"
+      }
+    }
+  }
+}

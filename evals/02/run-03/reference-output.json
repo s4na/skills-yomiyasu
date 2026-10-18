@@ -1,0 +1,4 @@
+{
+  "case_id": "holdout_jp_reason_attachment_venue_accessibility_01",
+  "response": "### 書き直した本文\n\n参加者に段差のない経路を案内するため、市民講座の会場を変更します。会場変更後は、手話通訳の手配が完了した回に限り、申込者へ確定案内を送ってください。\n\n---\n\n### 変えたところ\n- 「市民講座の会場を変更します。参加者に段差のない経路を案内するためです」→「参加者に段差のない経路を案内するため、市民講座の会場を変更します」（目的が会場変更にかかることを語順で明確にしました）\n\n### 確認の記録\n- 書き手・読み手・場面: 書き手: 決めていない／読み手: 運営担当者（推定。運営メモ）／場面: 運営メモ（指定）\n- 実行した検査: lint、diff、資料との照合、最終稿の照合\n- 実行しなかった検査: なし\n- 硬化の検査: 候補なし\n- 勢いの検査: 候補なし\n- 見直し候補: 原文 0件 → 最終稿 0件（件数は点数ではなく、増減は読みやすさの良し悪しを示さない）\n- yomiyasu-check: executed via=verify run=20261018T220653Z-40993347 attempt=1 final=text-sha256:928b7cf13182 mode=rewrite doc_type=manual checks=lint,diff,materials meaning_risk=0 replay=skipped"
+}

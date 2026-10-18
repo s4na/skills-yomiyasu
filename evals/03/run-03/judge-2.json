@@ -1,0 +1,38 @@
+{
+  "judge": "natural_verified_scorer_b",
+  "case_id": "natural_polish_wording_only_contact_01",
+  "request": "次の文を自然に整えてください。意味や情報は変えず、文だけ返してください。",
+  "scores": {
+    "A": {
+      "requirements": [
+        {"id": "R1", "mark": "○", "evidence": "『連絡を行います』を『連絡します』に簡潔化し、重い言い回しを自然に修正している。"},
+        {"id": "R2", "mark": "○", "evidence": "会議の開始時間が変更になったことを参加者に連絡する内容を保っている。"},
+        {"id": "R3", "mark": "○", "evidence": "具体的な時刻、主体の追加、約束を加えていない。"},
+        {"id": "R4", "mark": "○", "evidence": "推敲後の本文だけを返している。"}
+      ],
+      "critical_all_pass": true,
+      "readability": {"rating": "good", "evidence": "重い『連絡を行います』が簡潔になり、文の意味も明瞭。読点を外して連続して読める形にしている。"},
+      "edit_scope": {"rating": "minimal", "evidence": "語句を『連絡を行います』から『連絡します』へ直し、不要な読点も削除した。情報は変更していない。"},
+      "format_fit": {"rating": "fully_fits", "evidence": "本文一文のみ。"},
+      "unresolved_points": []
+    },
+    "B": {
+      "requirements": [
+        {"id": "R1", "mark": "○", "evidence": "『連絡を行います』を『連絡します』に簡潔化し、重い言い回しを自然に修正している。"},
+        {"id": "R2", "mark": "○", "evidence": "会議の開始時間が変更になったことを参加者に連絡する内容を保っている。"},
+        {"id": "R3", "mark": "○", "evidence": "具体的な時刻、主体の追加、約束を加えていない。"},
+        {"id": "R4", "mark": "○", "evidence": "推敲後の本文だけを返している。"}
+      ],
+      "critical_all_pass": true,
+      "readability": {"rating": "good", "evidence": "重い『連絡を行います』が簡潔になり、読点が長い目的語句と後続部分の区切りを示す。"},
+      "edit_scope": {"rating": "minimal", "evidence": "『連絡を行います』を『連絡します』に直しただけで、読点を含む他の表現は維持している。情報は変更していない。"},
+      "format_fit": {"rating": "fully_fits", "evidence": "本文一文のみ。"},
+      "unresolved_points": []
+    }
+  },
+  "comparison": {
+    "result": "tie",
+    "evidence": "両方とも不自然に重い言い回しを最小限修正し、内容を保ち、余計な情報や説明を加えていない。Aは読点を省いて流れる形、Bは読点で区切る形で、どちらも自然で許容可能。scenarioのacceptable_exampleはBと一致するが、evaluation_notesは完全一致を求めておらず、Aにも欠点とする根拠はないため同等と判定する。",
+    "unresolved_points": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source": "PR review finding 4308991122",
+  "candidate_output_path": "candidate-output.json",
+  "candidate_output_sha256": "e83a1a354787ad9b8a02813e7b34b15d612e9e259756a9e9c9a8b85a18026172",
+  "finding": "候補出力から『市民講座』が落ち、会場変更の対象が単独の本文から識別できない。",
+  "adjudication": {
+    "requirement_id": "R1",
+    "corrected_mark": "partial",
+    "critical_case_pass": false,
+    "reason": "目的を会場変更へ結び付けてはいるが、その会場変更がどの対象のものかを保持していない。R1は市民講座の会場変更を明示的に求めており、対象の欠落を合格にできない。"
+  },
+  "raw_candidate_output_and_original_judges_preserved": true,
+  "follow_up": "改稿後に対象・主体・固有名詞がどう残ったかを照合する指示を追加し、新しい固有対象を含むholdoutで回帰評価する。"
+}

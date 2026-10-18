@@ -1,0 +1,98 @@
+{
+  "run_id": "run-02",
+  "judgment_basis": "原文・依頼・固定要件・匿名出力のみで評価。critical要件は保守的に判定。",
+  "cases": [
+    {
+      "id": "median_structural_repair",
+      "A": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "延期決定を述べた後、不具合が昨日も再現したため再テスト時間を確保する、と因果関係をつないでいる。延期の理由と目的が保たれる。"},
+          {"status": "○", "critical": true, "evidence": "「先週から続き」「昨日の確認でも再現した」を維持。"},
+          {"status": "○", "critical": true, "evidence": "「影響範囲はまだ調査中です」と明記し、既知の影響を加えていない。"},
+          {"status": "partial", "critical": false, "evidence": "担当者・期限の追加はない。末尾を「時間を確保します」としたため、原文の目的説明より実行の約束に少し寄って読める。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 5,
+        "edit_scope_1_to_5": 4,
+        "unresolved_points": ["「時間を確保します」は確約に聞こえる可能性がわずかにある。"],
+        "output_format_fit": {"rating_1_to_5": 5, "evidence": "短い社内状況共有の本文だけを提示し、依頼に合う。"}
+      },
+      "B": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "再テスト時間を確保するための延期と最初の文で明示し、再現した不具合もその後に保持。"},
+          {"status": "○", "critical": true, "evidence": "「先週から続いており」「昨日の確認でも再現しました」を維持。"},
+          {"status": "○", "critical": true, "evidence": "影響範囲はまだ調査中とし、既知の影響を加えていない。"},
+          {"status": "○", "critical": false, "evidence": "担当者・期限・修正完了保証を加えず、延期理由を目的として記している。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 4,
+        "edit_scope_1_to_5": 2,
+        "unresolved_points": ["本文外の説明・検査記録が、短い社内共有として使う際に不要なノイズになる。"],
+        "output_format_fit": {"rating_1_to_5": 2, "evidence": "本文は適合するが、見出し、変更説明、確認ログが依頼された短い共有の出力を大きく超える。"}
+      }
+    },
+    {
+      "id": "edge_useful_ambiguity_noop",
+      "A": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "帰宅時期や不在理由を特定・推測していない。"},
+          {"status": "○", "critical": true, "evidence": "待つ気配と余韻を説明で解消せず、原文のまま保つ。"},
+          {"status": "○", "critical": false, "evidence": "短い断片のリズムと「先に寝てて」のメモを完全に維持。"},
+          {"status": "○", "critical": false, "evidence": "依頼に合う原文を実質的に変更せず残している。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 5,
+        "edit_scope_1_to_5": 5,
+        "unresolved_points": [],
+        "output_format_fit": {"rating_1_to_5": 5, "evidence": "本文のみで、依頼に沿ってそのまま提示。"}
+      },
+      "B": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "帰宅時期や不在理由を特定・推測していない。"},
+          {"status": "○", "critical": true, "evidence": "本文は原文どおりで、余韻を保つ。"},
+          {"status": "○", "critical": false, "evidence": "短い断片と指定のメモを維持。"},
+          {"status": "○", "critical": false, "evidence": "本文を変えず、変更なしと記載。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 4,
+        "edit_scope_1_to_5": 3,
+        "unresolved_points": ["末尾の「エッセイと判断したので、文の個性を残しました」は本文外の自己説明で、依頼への応答に不要。"],
+        "output_format_fit": {"rating_1_to_5": 2, "evidence": "書き直した本文の後に変更説明・確認ログ・追加の自己説明が続き、簡潔な随筆本文を求める依頼に対して過剰。"}
+      }
+    },
+    {
+      "id": "edge_nested_scope_policy",
+      "A": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "通常申請の8日条件、利用開始後の年額プラン制限、二重決済の例外を分け、指定の論理関係を保つ。"},
+          {"status": "○", "critical": true, "evidence": "「二重決済の場合は、プランや申請時期にかかわらず」と明示し、二重決済を両制限から独立させている。"},
+          {"status": "○", "critical": true, "evidence": "年額プランの制限を「利用開始後」に限定。"},
+          {"status": "○", "critical": false, "evidence": "8日条件や返金条件を追加せず、条件関係を明確化。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 5,
+        "edit_scope_1_to_5": 5,
+        "unresolved_points": [],
+        "output_format_fit": {"rating_1_to_5": 5, "evidence": "サポートページ向けの簡潔な条件文を提示。"}
+      },
+      "B": {
+        "requirements": [
+          {"status": "○", "critical": true, "evidence": "通常の8日条件、利用開始後の年額制限、二重決済の例外の関係を維持。"},
+          {"status": "○", "critical": true, "evidence": "二重決済はプラン・申請時期を問わないと追記して独立性を明示。"},
+          {"status": "○", "critical": true, "evidence": "年額プランの返金不可を利用開始後に限っている。"},
+          {"status": "○", "critical": false, "evidence": "新しい期限・返金条件は追加していない。"}
+        ],
+        "critical_all_pass": true,
+        "readability_1_to_5": 4,
+        "edit_scope_1_to_5": 3,
+        "unresolved_points": ["条件文自体は明確だが、本文外の変更説明と検査記録はサポートページ掲載用の出力には不要。"],
+        "output_format_fit": {"rating_1_to_5": 2, "evidence": "本文は適合する一方、書き直しの見出し、変更理由、確認ログが依頼用途の出力を超える。"}
+      }
+    }
+  ],
+  "overall": {
+    "A": {"critical_all_pass": true, "summary": "全ケースでcritical要件を満たす。簡潔な出力を保ち、不要な説明がない。1件だけ、目的を実行の約束に寄せた軽微な懸念がある。"},
+    "B": {"critical_all_pass": true, "summary": "全ケースで本文のcritical要件を満たし、内容面では適切。各回答に見出しや確認記録など長いメタ情報が付くため、依頼された出力形式と編集範囲への適合を一貫して損ねる。"},
+    "relative_assessment": "本文の要件充足は概ね同等。依頼された用途にそのまま使える出力という点でAを優位と評価する。"
+  }
+}
