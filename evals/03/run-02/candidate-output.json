@@ -1,0 +1,10 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "output": "会議の開始時間が変更になったことを、参加者に連絡します。",
+  "notes": {
+    "interpretation": "The sentence says that the speaker will inform the participants that the meeting start time has changed.",
+    "hesitation": "No material ambiguity; only the unnatural collocation '連絡を行います' needed smoothing.",
+    "inferred_decision_latitude": "The request permits minimal wording and grammar adjustment while preserving meaning and information; no restructuring or added details inferred.",
+    "retries": 0
+  }
+}

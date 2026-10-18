@@ -1,0 +1,14 @@
+{
+  "case_id": "natural-reference-comparable-run03",
+  "output": "会議の開始時間が変更になったことを参加者に連絡します。",
+  "execution_notes": {
+    "reference_skill": "/tmp/yomiyasu-reference-84e1f5b/skills/yomiyasu/SKILL.md",
+    "skill_version": "2.0.1",
+    "run_attempts": 1,
+    "run_status": "failed_before_evaluation",
+    "run_error": "Invalid --doc-type value '報告'; the skill validator accepts only listed values such as mail or minutes.",
+    "retry_performed": false,
+    "verify_performed": false,
+    "reason": "The frozen task required one run only with no retries; the sole run command was rejected because of the invalid doc-type argument. The output is the direct one-pass edit following the skill's meaning-preservation and information-preservation rules."
+  }
+}

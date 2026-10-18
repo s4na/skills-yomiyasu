@@ -1,0 +1,95 @@
+{
+  "case_id": "natural_polish_wording_only_contact_01",
+  "judge": "natural_verified_scorer_a",
+  "scores": {
+    "A": {
+      "requirements": [
+        {
+          "id": "R1",
+          "mark": "○",
+          "evidence": "「連絡を行います」を「連絡します」に置き換え、重い言い回しを自然に最小限修正している。"
+        },
+        {
+          "id": "R2",
+          "mark": "○",
+          "evidence": "会議の開始時間が変更になったこと、参加者に連絡することの両方を保っている。"
+        },
+        {
+          "id": "R3",
+          "mark": "○",
+          "evidence": "具体的な変更後時刻、追加の主体、約束を加えていない。"
+        },
+        {
+          "id": "R4",
+          "mark": "○",
+          "evidence": "推敲した文だけを返している。"
+        }
+      ],
+      "readability": {
+        "rating": 4,
+        "scale": "1-5",
+        "evidence": "語句の不自然さが解消され、意味も追いやすい。読点は文意を妨げないが、ここではなくても自然に読める。"
+      },
+      "edit_scope": {
+        "rating": 5,
+        "scale": "1-5 where 5 is best/minimal",
+        "evidence": "不自然な述語表現だけを置き換え、他の表現を維持している。"
+      },
+      "format_fit": {
+        "rating": 5,
+        "scale": "1-5",
+        "evidence": "本文のみで、依頼形式に合致する。"
+      },
+      "unresolved_points": [
+        "「変更になったことを」の後の読点はなくても自然であり、軽微な読みの差が残る。"
+      ],
+      "critical_all_pass": true
+    },
+    "B": {
+      "requirements": [
+        {
+          "id": "R1",
+          "mark": "○",
+          "evidence": "「連絡を行います」を「連絡します」に置き換え、重い言い回しを自然に最小限修正している。"
+        },
+        {
+          "id": "R2",
+          "mark": "○",
+          "evidence": "会議の開始時間が変更になったこと、参加者に連絡することの両方を保っている。"
+        },
+        {
+          "id": "R3",
+          "mark": "○",
+          "evidence": "具体的な変更後時刻、追加の主体、約束を加えていない。"
+        },
+        {
+          "id": "R4",
+          "mark": "○",
+          "evidence": "推敲した文だけを返している。"
+        }
+      ],
+      "readability": {
+        "rating": 5,
+        "scale": "1-5",
+        "evidence": "語句の不自然さが解消され、不要な読点も整理されて文の流れが滑らか。"
+      },
+      "edit_scope": {
+        "rating": 4,
+        "scale": "1-5 where 5 is best/minimal",
+        "evidence": "読点削除は軽微で自然さに寄与するが、主要な修正だけで済ませたAより編集範囲はわずかに広い。"
+      },
+      "format_fit": {
+        "rating": 5,
+        "scale": "1-5",
+        "evidence": "本文のみで、依頼形式に合致する。"
+      },
+      "unresolved_points": [],
+      "critical_all_pass": true
+    }
+  },
+  "comparison": {
+    "result": "B_slight_preference",
+    "evidence": "両方とも全要件を満たし内容を保持している。Bは読点を除いて文の流れが少し滑らか。一方、Aは変更範囲がより小さい。差は軽微で、どちらも十分に自然。",
+    "tie": false
+  }
+}
