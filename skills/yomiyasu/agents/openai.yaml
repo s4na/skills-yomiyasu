@@ -1,0 +1,4 @@
+interface:
+  display_name: "読みやす"
+  short_description: "文章の関係を構造から読み取り、意味を保って推敲します"
+  default_prompt: "$yomiyasu を使って、この文章を読み手が関係を追いやすい形に整えてください。"
